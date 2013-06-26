@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load staticfiles %}
+{% block head %} 
+<meta name="description" content="Página oficial de la empresa Duranjo Web C.A. que desarrolla soluciones informaticas para 
+diseño de páginas web, software y diseño gráfico. Además de ofrecer diferentes planes accesibles a cualquier tipo de cliente. Innovación, estilo y creatividad es nuestro ideal.">
+<meta name="msvalidate.01" content="5C0D61EB459CD0F5B9245FEA8F798DAA" />
+{% endblock%}
+{% block title %}
+Duranjo Web
+{% endblock%}
+{% block css%}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/index.css">
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/adquiridos/back-top.js"></script>
+{% endblock %}
+{% block navi %}
+		<ul>
+			<li class="index"><a href="{% url 'homepageindex' %}">Inicio</a></li>
+			<li class="works"><a href="{% url 'homepageworks' %}">Trabajos</a></li>
+			<li class="services"><a href="{% url 'homepageservices' %}">Servicios</a></li>
+			<li class="contact"><a href="{% url 'homapagecontact' %}">Contacto</a></li>
+		</ul>				
+{% endblock %}
+{% block clear %}{% endblock%}
+{% block contenido %}
+	<section class="bannerPrincipal">
+		<div class="wrapper banner1">
+		</div>
+	</section>
+	<section class="ofrecemos">		
+	</section>
+	<section class="aboutus">		
+	</section>
+	<section class="infoContacto">
+	</section>	
+	<!-- Google+ SCRIPT --> 
+		<!-- Place this tag after the last badge tag. -->
+		<script  async type="text/javascript">
+		 window.___gcfg = {lang: 'es-419'};
+		 (function() {
+		    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		   po.src = 'https://apis.google.com/js/plusone.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		  })();
+		</script>
+	<!-- FACEBOOK SCRIPT -->
+			<div id="fb-root"></div>
+		<script async>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+	<!-- TWITTER SCRIPT -->
+	<script async>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	
+	<!-- BACK TOP BOX -->
+	<div id="back-top" class="back-top">
+		<a href="#home"><span>↑</span>Regresar arriba</a>
+	</div>
+{% endblock%}
