@@ -4,13 +4,13 @@
 }
 .contact a{
 	background: black;
-	background: rgba(92, 92, 189, 0.8);
+	background: rgba(56, 163, 213, 0.8);
 }
 .contacto{
 	position: relative;
 	padding: 50px 0;
 	border-top: 5px solid #CCCCCC;
-	background: url('../../img/satinweave_@2X.png');
+	background: url('../../img/cream_dust_@2X.png');
 }
 .logoAgua{
 	background: url('../../img/activa24logo.png') no-repeat;

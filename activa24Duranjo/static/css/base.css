@@ -25,11 +25,11 @@ a img {border: none; }
 header{
 	display: inline-block;
 	width: 100%;
-	height: 150px;
+	height: 110px;
 }
 .informacionHeader{
 	width: 100%;
-	height: 50px;
+	height: 40px;
 }
 .rifInfo{
 	float: left;
@@ -47,12 +47,10 @@ header{
 }
 header .logo img{
 	width: 250px;
-	margin-top: 10px;
 	float: left;
 }
 .barraNavegacion{
 	text-align: right;
-	padding-top: 20px;
 }
 .barraNavegacion ul li{
 	display: inline-block;
@@ -61,14 +59,13 @@ header .logo img{
 	background: darkorchid;
 	background: rgba(77,77,77,0.8);
 	color: white;
-	padding: 10px 20px;
+	padding: 10px 35px;
 	text-decoration: none;
-	text-transform: uppercase;
 	border-left: 2px solid white
 }
 .barraNavegacion a:hover{
 	background: black;
-	background: rgba(92, 92, 189, 0.8);
+	background: rgba(56, 163, 213, 0.8);
 }
 .barraNavegacion li:first-child a{
 	border-left: none;
