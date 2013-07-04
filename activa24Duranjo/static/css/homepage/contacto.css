@@ -41,6 +41,7 @@
 .campo input{
 	background: #E6E7E7;
 	border: 3px solid #CCCCCC;
+	height: 30px;
 	width: 50%;
 }
 

@@ -56,15 +56,15 @@ header .logo img{
 	display: inline-block;
 }
 .barraNavegacion a{
-	background: darkorchid;
-	background: rgba(77,77,77,0.8);
+	background: black;
+	background: rgba(77,77,77,0.9);
 	color: white;
 	padding: 10px 35px;
 	text-decoration: none;
 	border-left: 2px solid white
 }
 .barraNavegacion a:hover{
-	background: black;
+	background: blue;
 	background: rgba(56, 163, 213, 0.8);
 }
 .barraNavegacion li:first-child a{

@@ -4,8 +4,8 @@ from django import forms
 
 
 class contactForm(forms.Form):
-	nombre = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Su nombre'}))
-	rif = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'J-99999999-9'}))
+	nombre = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Su nombre o empresa'}))
+	rif = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'J-99999999-9 | 9999999'}))
 	email = forms.EmailField(widget=forms.TextInput(attrs={'placeholder': ' nick@email.com'}))
 	telefono = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Su Número de teléfono'}))
 	texto = forms.CharField(widget=forms.Textarea)
