@@ -30,7 +30,7 @@ def contact(request):
 		if form.is_valid():
 			success = True
 			cd = form.cleaned_data
-			asunto = u'Por: %s mail: %s Tipo de servicio: %s Plan: %s' % (cd['nombre'], cd['email'], cd['tipoServicio'], cd['planes'])
+			asunto = u'Por: %s mail: %s RIF: %s Plan: %s' % (cd['nombre'], cd['email'], cd['rif'], cd['planes'])
 			content = u'Email contacto: %s \nAsunto: %s \nTelefono: %s \nDescripcion: %s' % (cd['email'], asunto, cd['telefono'], cd['texto'])
 			send_mail(asunto, content, cd['email'], ['info@activa24ca.com'])
 	else:

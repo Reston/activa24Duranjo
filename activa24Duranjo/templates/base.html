@@ -62,20 +62,26 @@
 		{% block footer %}{% endblock%}
 		<div class="wrapper">
 			<div class="footer-der">
-				<a href="{% url 'homepageindex' %}">Inicio</a>
-				<a href="{% url 'homepageabout' %}">Sobre nosotros</a>
-				<a href="{% url 'homepageserviciosyproductos' %}">Servicios</a>
-				<a href="{% url 'homapagecontact' %}">Contacto</a>
+				<ul class="listaMenuFooter">
+					<li><a href="{% url 'homepageindex' %}">Inicio</a></li>
+					<li><a href="{% url 'homepageabout' %}">Sobre nosotros</a></li>
+					<li><a href="{% url 'homepageserviciosyproductos' %}">Productos y Servicios</a></li>
+					<li><a href="{% url 'homapagecontact' %}">Contacto</a></li>
+				</ul>				
 				<div class="facebookIcon">Facebook!</div>
 			</div>
 			<div class="footer-med">
-				<img src="{% static 'img/activa24logo.png' %}" alt="Activa 24 C.A. Logo">
+				<div class="logoactiva24"></div>
 				<p>Pertenece a la corporación VADECOL</p>
-				<div></div>
+				<div class="logovadecol"></div>
 			</div>
 			<div class="footer-izq">
 				Diseño y Desarrollo por:
-				<a href="http://duranjo.com/"><img src="http://duranjo.com/static/img/logoduranjo.png" alt="Duranjo Web C.A. Logo"></a>
+				<div class="logoDuranjo">
+					<a href="http://duranjo.com/">
+						<img src="{% static 'img/duranjowhite.png' %}" alt="Duranjo Web C.A. Logo">
+					</a>
+				</div>
 			</div>		  
 		</div>
 	</footer>

@@ -2,13 +2,18 @@
 body{
 	margin: 0;
 }
+h2{
+	margin-top: 0;
+	color: #3651A0;
+	text-align: center;
+	text-transform: uppercase;
+	border-bottom: 2px solid #D1D1D1;
+	width: 30%;
+	margin: 0 auto 20px auto;	
+}
 img{
 	width: auto;
 	height: auto;
-}
-.tituloh2 h2{
-	margin-top:0;
-	text-align: center;
 }
 a img {border: none; }
 .wrapper{
@@ -56,8 +61,9 @@ header .logo img{
 	background: darkorchid;
 	background: rgba(77,77,77,0.8);
 	color: white;
-	padding: 10px 35px;
+	padding: 10px 20px;
 	text-decoration: none;
+	text-transform: uppercase;
 	border-left: 2px solid white
 }
 .barraNavegacion a:hover{
@@ -67,7 +73,122 @@ header .logo img{
 .barraNavegacion li:first-child a{
 	border-left: none;
 }
-
 /* END HEADER */
 /* FOOTER */
-/* NED FOOTER */
+footer{
+	background: #3953A0;
+	padding: 30px 0;
+	color: white;
+}
+footer > .wrapper > div{
+	display: inline-block;
+	vertical-align: top;
+}
+.footer-der, .footer-med, .footer-izq{
+	width: 33%;
+}
+
+.footer-med img{
+	width: 256px;
+}
+.logoDuranjo img{
+	width: 128px;
+}
+.logoactiva24{
+	margin: 0 auto 0 auto;
+	background: url('../img/logosblancos.png') 0 0;
+	width: 260px;
+	height: 100px;
+}
+.logovadecol{
+	margin: 0 auto 0 auto;
+	background: url('../img/logosblancos.png') -259px 0;
+	width: 110px;
+	height: 100px;
+}
+.listaMenuFooter{
+	list-style: none;
+}
+.listaMenuFooter li{
+	text-align: center;
+	margin-bottom: 10px;
+}
+.listaMenuFooter li a{
+	text-decoration: none;
+	color: white;
+}
+.footer-izq{
+	text-align: right;
+	margin-top: 150px;
+}
+/* END FOOTER */
+
+/* Configuración back to top button */
+
+.back-top {
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	z-index: 1;
+}
+
+.back-top a {
+	width: 108px;
+	display: block;
+	text-align: center;
+	font: 11px/100% Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: black;
+
+	/* transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+.back-top a:hover {
+	color: #000;
+}
+
+	/* arrow icon (span tag) */
+.back-top span {
+	width: 70px;
+	height: 70px;
+	display: block;
+	margin: 0 auto 7px auto;
+	font-size: 0;
+	background: rgb(99, 93, 93) url(../img/up-arrow.png) no-repeat center center;
+
+	/* rounded corners */
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+
+	/* transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+.back-top a:hover span {
+	background-color: #777;
+}
+
+@media screen and (max-width: 1000px){
+
+	/* configuración back-to-top responsive */
+	.back-top a{
+		width: 60px;
+	}
+	.back-top span {
+		width: 40px;
+		height: 40px;
+		font-weight: bold;
+		font-size: 4em;
+		line-height: 30px;
+		background: none;
+		margin: 0 auto 0 auto;
+	}
+	.back-top a:hover span {
+		background:none;
+	}
+}

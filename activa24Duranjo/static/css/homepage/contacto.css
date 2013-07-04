@@ -1,0 +1,75 @@
+@charset 'utf-8';
+.contactoInfo p{
+	color: black;
+}
+.contact a{
+	background: black;
+	background: rgba(92, 92, 189, 0.8);
+}
+.contacto{
+	position: relative;
+	padding: 50px 0;
+	border-top: 5px solid #CCCCCC;
+	background: url('../../img/satinweave_@2X.png');
+}
+.logoAgua{
+	background: url('../../img/activa24logo.png') no-repeat;
+	position: absolute;
+	bottom: 5%;
+	right: 30%;
+	margin: 0;
+	width: 340px;
+	height: 80px;
+	-webkit-transform:scale(1.4);
+	-moz-transform:scale(1.4);
+	-o-transform:scale(1.4);
+	transform:scale(1.4);
+	opacity: 0.1;
+	z-index: -1;
+}
+/* Contacto izq */
+.formularioContacto{
+	vertical-align: top;
+	display: inline-block;
+	width: 49%;
+}
+.campo{
+	height: 75px;
+	margin: 0 auto 10px auto;
+}
+
+.campo input{
+	background: #E6E7E7;
+	border: 3px solid #CCCCCC;
+	width: 50%;
+}
+
+.campo label{
+	float: left;
+	width: 350px;
+}
+textarea{
+	background: #E6E7E7;
+	border: 3px solid #CCCCCC;
+}
+
+input[type="submit"]{
+	margin-top: 10px;
+	background: gray;
+	padding: 5px 20px;
+	border: none;
+	color: whitesmoke;
+	text-transform: uppercase;
+}
+
+/* Contacto der */
+.informacionContacto{
+	vertical-align: top;
+	display: inline-block;
+	width: 49%;
+}
+.map{
+	width: 400px;
+	height: 350px;
+	background: #3953A0;
+}
