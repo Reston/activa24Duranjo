@@ -79,6 +79,7 @@ footer{
 	background: #3953A0;
 	padding: 30px 0;
 	color: white;
+	border-top: 5px solid #8CA6E9;
 }
 footer > .wrapper > div{
 	display: inline-block;
@@ -87,7 +88,12 @@ footer > .wrapper > div{
 .footer-der, .footer-med, .footer-izq{
 	width: 33%;
 }
-
+.facebookIcon{
+	background: url('../img/logosblancos.png') 34px -6px;
+	width: 35px;
+	height: 35px;
+	float: left;
+}
 .footer-med img{
 	width: 256px;
 }
@@ -108,9 +114,10 @@ footer > .wrapper > div{
 }
 .listaMenuFooter{
 	list-style: none;
+	padding: 0;
+	font-size: 1.3em;
 }
 .listaMenuFooter li{
-	text-align: center;
 	margin-bottom: 10px;
 }
 .listaMenuFooter li a{
