@@ -11,9 +11,9 @@ sitemaps = {
 urlpatterns = patterns(
 	'',
 	# Examples:
-	# url(r'^$', 'basicoDuranjo.views.home', name='home'),
-	# url(r'^basicoDuranjo/', include('basicoDuranjo.foo.urls')),
-
+	# url(r'^$', 'activa24Duranjo.views.home', name='home'),
+	# url(r'^activa24Duranjo/', include('activa24Duranjo.foo.urls')),
+	url(r'^', include('activa24Duranjo.apps.homepage.urls')),
 	# Uncomment the admin/doc line below to enable admin documentation:
 	# url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 

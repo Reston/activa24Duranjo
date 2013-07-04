@@ -3,19 +3,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<!--[if lt IE 8]><script type="text/javascript" src="{{ STATIC_URL }}js/adquiridos/ie6-not-supported.js" ></script><![endif]-->
+<!--[if lt IE 8]><script type="text/javascript" src="{% static 'js/adquiridos/ie6-not-supported.js' %}" ></script><![endif]-->
 <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<script type="text/javascript" src="{{ STATIC_URL }}js/adquiridos/PIE.js"></script>
+<script type="text/javascript" src="{% static 'js/adquiridos/PIE.js' %}"></script>
 <![endif]-->
 <meta name="keywords" content="Diseño Web,Software,Gráfico,Páginas web,Venezuela,Maracaibo,Presupuesto,Planes, sitio web">
 <meta name="author" content="José Ordoñez, Diana Chavez y Elibeth Quiñones">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 {% block head %} {% endblock%}
-<link rel="shortcut icon" type="image/x-icon" href="{{ STATIC_URL }}img/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
 <title>{% block title %} {% endblock%}</title>
-<link rel="stylesheet" href="{{ STATIC_URL }}css/normalize.css">
+<link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
 {% block css %}
 {% endblock %}
 {% block js %}
@@ -33,22 +34,48 @@
 	  ga('send', 'pageview');
 	</script> -->
 	<header id="home" class="cabecera">
-		<div class="wrapper">				
+		<div class="wrapper">
+			<div class="informacionHeader">
+				<div class="rifInfo">
+					<p>RIF: J-40172941-0</p>
+				</div>
+				<div class="contactoInfo">
+					<p>Teléfonos: +58 265 6319998 y +58 261 6312043</p>
+					<img src="{% static 'img/banderita.png' %}" alt="bandera de Venezuela">					
+				</div>	
+			</div>		
+			<div class="logo">
+				<a href="{% url 'homepageindex' %}" title="Activa 24 C.A.">
+					<img src="{% static 'img/activa24logo.png' %}" alt="logo activa24">
+				</a>
+			</div>		
 			<nav class="barraNavegacion">
 				{% block navi %} {% endblock%}
 			</nav>
 		</div>
 	</header>
 	<section class="contenido">
-		{% block contenido %} {% endblock%}
+		{% block contenido %}{% endblock%}
 	</section>
-	{% block clear %} {% endblock %}
+	{% block clear %}{% endblock %}
 	<footer>
 		{% block footer %}{% endblock%}
 		<div class="wrapper">
 			<div class="footer-der">
+				<a href="{% url 'homepageindex' %}">Inicio</a>
+				<a href="{% url 'homepageabout' %}">Sobre nosotros</a>
+				<a href="{% url 'homepageserviciosyproductos' %}">Servicios</a>
+				<a href="{% url 'homapagecontact' %}">Contacto</a>
+				<div class="facebookIcon">Facebook!</div>
+			</div>
+			<div class="footer-med">
+				<img src="{% static 'img/activa24logo.png' %}" alt="Activa 24 C.A. Logo">
+				<p>Pertenece a la corporación VADECOL</p>
+				<div></div>
 			</div>
 			<div class="footer-izq">
+				Diseño y Desarrollo por:
+				<a href="http://duranjo.com/"><img src="http://duranjo.com/static/img/logoduranjo.png" alt="Duranjo Web C.A. Logo"></a>
 			</div>		  
 		</div>
 	</footer>

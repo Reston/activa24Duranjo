@@ -1,1 +1,73 @@
 @charset 'utf-8';
+body{
+	margin: 0;
+}
+img{
+	width: auto;
+	height: auto;
+}
+.tituloh2 h2{
+	margin-top:0;
+	text-align: center;
+}
+a img {border: none; }
+.wrapper{
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto 0 auto;
+}
+/* HEADER */
+header{
+	display: inline-block;
+	width: 100%;
+	height: 150px;
+}
+.informacionHeader{
+	width: 100%;
+	height: 50px;
+}
+.rifInfo{
+	float: left;
+}
+.rifInfo p{
+	margin: 0;
+}
+.contactoInfo{
+	float: right
+}
+.contactoInfo p{
+	color: white;
+	display: inline-block;
+	margin: 0;
+}
+header .logo img{
+	width: 250px;
+	margin-top: 10px;
+	float: left;
+}
+.barraNavegacion{
+	text-align: right;
+	padding-top: 20px;
+}
+.barraNavegacion ul li{
+	display: inline-block;
+}
+.barraNavegacion a{
+	background: darkorchid;
+	background: rgba(77,77,77,0.8);
+	color: white;
+	padding: 10px 35px;
+	text-decoration: none;
+	border-left: 2px solid white
+}
+.barraNavegacion a:hover{
+	background: black;
+	background: rgba(92, 92, 189, 0.8);
+}
+.barraNavegacion li:first-child a{
+	border-left: none;
+}
+
+/* END HEADER */
+/* FOOTER */
+/* NED FOOTER */
