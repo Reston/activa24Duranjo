@@ -18,9 +18,7 @@ def about(request):
 
 
 def serviciosyproductos(request):
-	serv = "El arte de servir"
-	ctx = {'serv': serv}
-	return render_to_response('homepage/serviciosproductos.html', ctx, context_instance=RequestContext(request))
+	return render_to_response('homepage/serviciosproductos.html', context_instance=RequestContext(request))
 
 
 def contact(request):

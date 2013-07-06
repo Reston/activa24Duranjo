@@ -1,0 +1,44 @@
+@charset 'utf-8';
+/* section oferta*/
+.oferta{
+	margin-top: 50px;
+	text-align: center;
+}
+.ofertaizq, .ofertader{
+	display: inline-block;
+}
+/* Lista productos*/
+.productos{
+	margin-top: 50px;
+}
+.productoContainer{
+	width: 220px;
+	display: inline-block;
+	margin-left:20px; 
+	text-align: center;
+}
+.productoContainer img{
+	text-align: center;
+	width: 200px;
+}
+.productoDescripcion{
+	display: none;
+}
+.productoTitulo{
+	background: rgba(57, 83, 160,0.8);
+	color: white;
+	text-align: center;
+	height: 35px;
+	line-height: 35px;
+}
+
+/* slider */
+.otrasCategorias{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.slider{
+	background: #E6E7E7;
+	text-align: center;
+	height: 250px;
+}

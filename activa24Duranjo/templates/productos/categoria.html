@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load staticfiles %}
+{% block head %} 
+<meta name="description" content="Página oficial de la empresa Duranjo Web C.A. que desarrolla soluciones informaticas para 
+diseño de páginas web, software y diseño gráfico. Además de ofrecer diferentes planes accesibles a cualquier tipo de cliente. Innovación, estilo y creatividad es nuestro ideal.">
+<meta name="msvalidate.01" content="5C0D61EB459CD0F5B9245FEA8F798DAA" />
+{% endblock%}
+{% block title %}
+Duranjo Web
+{% endblock%}
+{% block css%}
+<link rel="stylesheet" href="{% static 'css/productos/categoria.css' %}">
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'js/adquiridos/back-top.js' %}"></script>
+{% endblock %}
+{% block navi %}
+		<ul>
+			<li class="index"><a href="{% url 'homepageindex' %}">Inicio</a>
+			<li class="about"><a href="{% url 'homepageabout' %}">Sobre nosotros</a>
+			<li class="services"><a href="{% url 'homepageserviciosyproductos' %}">Productos y Servicios</a>
+			<li class="contact"><a href="{% url 'homapagecontact' %}">Contacto</a>
+		</ul>				
+{% endblock %}
+{% block contenido %}
+<section class="categoria">
+	<div class="wrapper">
+		<section class="oferta">
+			<div class="tituloh2"><h2>Nombre de la categoría</h2></div>
+			<!-- Se debe hacer un modulo para cargar estas dos imagenes o hacerlo manual estableciendo dos nombres y cambiar eso y ya-->
+			<div class="ofertaizq">
+				<img src="{% static 'img/logodummy.png' %}" alt="logo dummy" style="width: 460px;">
+			</div>
+			<div class="ofertader">
+				<img src="{% static 'img/logodummy.png' %}" alt="logo dummy" style="width: 460px;">
+			</div>
+		</section>
+		<section class="productos">
+			<h2>Productos</h2>
+			<div class="listaProductos">
+			<!-- Example area of products -->
+				<div class="productoContainer">
+					<img src="{% static 'img/camaravigilancia.jpg' %}" alt="Cámara de vigilancia">
+					<div class="productoTitulo">Nombre de la categoría</div>
+					<div class="productoDescripcion">
+						<ul class="productList">
+							<li>Modelo: LS-DM 4688 ASDASD FF</li>
+							<li>Kit de cuatro cámaras con DVR de 4</li>
+							<li>Canales de grabación tiempo real</li>
+						</ul>
+					</div>
+				</div>
+				<div class="productoContainer">
+					<img src="{% static 'img/camaravigilancia.jpg' %}" alt="Cámara de vigilancia">
+					<div class="productoTitulo">Nombre de la categoría</div>
+					<div class="productoDescripcion">
+						<ul class="productList">
+							<li>Modelo: LS-DM 4688 ASDASD FF</li>
+							<li>Kit de cuatro cámaras con DVR de 4</li>
+							<li>Canales de grabación tiempo real</li>
+						</ul>
+					</div>
+				</div>
+				<div class="productoContainer">
+					<img src="{% static 'img/camaravigilancia.jpg' %}" alt="Cámara de vigilancia">
+					<div class="productoTitulo">Nombre de la categoría</div>
+					<div class="productoDescripcion">
+						<ul class="productList">
+							<li>Modelo: LS-DM 4688 ASDASD FF</li>
+							<li>Kit de cuatro cámaras con DVR de 4</li>
+							<li>Canales de grabación tiempo real</li>
+						</ul>
+					</div>
+				</div>
+				<div class="productoContainer">
+					<img src="{% static 'img/camaravigilancia.jpg' %}" alt="Cámara de vigilancia">
+					<div class="productoTitulo">Nombre de la categoría</div>
+					<div class="productoDescripcion">
+						<ul class="productList">
+							<li>Modelo: LS-DM 4688 ASDASD FF</li>
+							<li>Kit de cuatro cámaras con DVR de 4</li>
+							<li>Canales de grabación tiempo real</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="otrasCategorias">
+			<h2>Otras categorías</h2>
+			<div class="slider">
+				<img src="{% static 'img/logodummy.png' %}" alt="logo dummy" style="width: 200px;">
+				<img src="{% static 'img/logodummy.png' %}" alt="logo dummy" style="width: 200px;">
+				<img src="{% static 'img/logodummy.png' %}" alt="logo dummy" style="width: 200px;">
+				<img src="{% static 'img/logodummy.png' %}" alt="logo dummy" style="width: 200px;">
+			</div>
+		</section>
+	</div>
+</section>
+{% endblock %}

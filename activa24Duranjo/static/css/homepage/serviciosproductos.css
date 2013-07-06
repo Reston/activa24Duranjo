@@ -6,3 +6,59 @@
 	background: black;
 	background: rgba(56, 163, 213, 0.8);
 }
+.serviciosProductos{
+	border-top: 5px solid #CCCCCC;
+	padding: 50px 0;
+}
+/* sección headerServicios*/
+.tituloMujer{
+	display: inline-block;
+	width: 29%;
+}
+.mujerImg{
+	background: url('../../img/logodummy.png');
+	width: 270px;
+	height: 185px;
+	border: 1px solid; /* POR PRUEBAAAAAA!!!! */
+}
+.tituloAzul{
+	background: #3953a0;
+	width: 272px; /* Mientras la imagen tenga este tamaño por el borde*/
+	height: 30px;
+	line-height: 30px;
+	color: white;
+	text-indent: 45px;
+	font-size: 1.2em;
+}
+.textoHeaderServicios{
+	display: inline-block;
+	width: 70%;
+	text-align: justify;
+}
+.textoHeaderServicios h3{
+	text-align: right;
+}
+/* sección contenidoServicios */
+.contenidoServicios{
+	margin-bottom: 1em;
+}
+.categoriaContainer{
+	width: 300px;
+	display: inline-block;
+	margin-left:20px; 
+	text-align: center;
+}
+.categoriaContainer img{
+	text-align: center;
+	width: 200px;
+}
+.categoriaDescripcion{
+	display: none;
+}
+.categoriaTitulo{
+	background: rgba(57, 83, 160,0.8);
+	color: white;
+	text-align: center;
+	height: 35px;
+	line-height: 35px;
+}
