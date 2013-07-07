@@ -132,7 +132,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'activa24Duranjo.apps.productos',
     # Uncomment the next line to enable admin documentation:
-    'django.contrib.admindocs',
+    #'django.contrib.admindocs',
 )
 
 # A sample logging configuration. The only tangible logging
