@@ -1,5 +1,17 @@
 from django.contrib import admin
-from activa24Duranjo.apps.productos.models import Categoria, Producto
+#from django.contrib.contenttypes import generic
+from activa24Duranjo.apps.productos.models import Categoria, Producto, ImgProductos
 
-admin.site.register(Producto)
 admin.site.register(Categoria)
+
+
+class ImgProductosInline(admin.TabularInline):
+    model = ImgProductos
+
+class ProductoAdmin(admin.ModelAdmin):
+    inlines = [ 
+    	ImgProductosInline,
+     ]
+
+
+admin.site.register(Producto, ProductoAdmin)
