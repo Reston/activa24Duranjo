@@ -127,6 +127,9 @@ footer > .wrapper > div{
 	text-align: right;
 	margin-top: 150px;
 }
+.footer-med{
+	text-align: center;
+}
 /* END FOOTER */
 
 /* Configuración back to top button */
