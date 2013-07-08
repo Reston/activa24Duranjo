@@ -4,7 +4,7 @@
 }
 .contact a{
 	background: black;
-	background: rgba(56, 163, 213, 0.8);
+	background: rgba(56, 75, 213, 0.8)
 }
 .contacto{
 	position: relative;
@@ -41,6 +41,7 @@
 .campo input{
 	background: #E6E7E7;
 	border: 1px solid #CCCCCC;
+	text-indent: 5px;
 	height: 33px;
 	width: 84%;
 }
