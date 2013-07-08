@@ -6,21 +6,21 @@
 */
 
 .slidyContainer {
-	overflow: hidden;
-	position: relative;
-	margin: 0 0 1em 0;
-  height: 600px;
-  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    height: 560px;
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
 
 }
 
 .slidyContainer .slidySlides {
-  margin: auto;
-	position: relative;
-	left: 0;
-	z-index: 1
-		overflow: hidden;
-		-webkit-transition: all 1500ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
+    margin: auto;
+    position: relative;
+    left: 0;
+    z-index: 1
+    overflow: hidden;
+    -webkit-transition: all 1500ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
        -moz-transition: all 1500ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
          -o-transition: all 1500ms cubic-bezier(0.250, 0.100, 0.250, 1.000);
             transition: all 1500ms cubic-bezier(0.250, 0.100, 0.250, 1.000); /* ease (default) */
@@ -33,20 +33,20 @@
 */
 
 .slidyContainer .movePrev, .slidyContainer .moveNext {
-	position: absolute;
-	background: url('../img/arrows.png');
-	width: 33px;
-	height: 33px;
-	display: inline;
+  position: absolute;
+  background: url('../img/arrows.png');
+  width: 33px;
+  height: 33px;
+  display: inline;
   opacity: 0 ;
   -webkit-transition: opacity 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000) 50ms;
      -moz-transition: opacity 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000) 50ms;
        -o-transition: opacity 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000) 50ms;
           transition: opacity 500ms cubic-bezier(0.250, 0.100, 0.250, 1.000) 50ms;
 
-	top: 5%;
-	z-index: 10;
-	cursor: pointer;
+    top: 5%;
+    z-index: 10;
+    cursor: pointer;
   -webkit-border-radius: 19px;
      -moz-border-radius: 19px;
        -o-border-radius: 19px;
@@ -56,21 +56,23 @@
 }
 
 .slidyContainer .movePrev:hover {
-		background-position: 0px -34px;
+        background-position: 0px -34px;
 }
 
 .slidyContainer .moveNext:hover {
-		background-position: -34px -34px;
+        background-position: -34px -34px;
 }
 
 
 .slidyContainer .movePrev {
-	left: 1%;
+    left: 1%;
+    top: 50%;
 }
 
 .slidyContainer .moveNext {
-	right: 1%;
-	background-position: -34px 0;
+    right: 1%;
+    top: 50%;
+    background-position: -34px 0;
 }
 
 .slidyContainer .movePrev.opaque, .slidyContainer .moveNext.opaque {
@@ -83,31 +85,31 @@
 */
 
 .slidyContainer .slidySlides figure.slidyLeft {
-	left: -100%;
-	-webkit-transition: left 2000ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 100ms;
-	   -moz-transition: left 2000ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 100ms;
-	     -o-transition: left 2000ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 100ms;
-	        transition: left 2000ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 100ms; /* easeOutQuart */
+    left: -100%;
+    -webkit-transition: left 2000ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 100ms;
+       -moz-transition: left 2000ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 100ms;
+         -o-transition: left 2000ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 100ms;
+            transition: left 2000ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 100ms; /* easeOutQuart */
 
 }
 
 .slidyContainer .slidySlides figure.slidyRight {
-	left: 100%;
-	-webkit-transition: left 2000ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 100ms;
-	   -moz-transition: left 2000ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 100ms;
-	     -o-transition: left 2000ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 100ms;
-	        transition: left 2000ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 100ms; /* easeOutQuart */
+    left: 100%;
+    -webkit-transition: left 2000ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 100ms;
+       -moz-transition: left 2000ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 100ms;
+         -o-transition: left 2000ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 100ms;
+            transition: left 2000ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 100ms; /* easeOutQuart */
 
 }
 
 .slidyContainer .slidySlides figure.slidyCurrent{
-	position: relative;
-	left: 0;
-	z-index: 3;
-	-webkit-transition: left 1500ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 50ms;
-	   -moz-transition: left 1500ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 50ms;
-	     -o-transition: left 1500ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 50ms;
-	        transition: left 1500ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 50ms; /* easeOutQuart */
+    position: relative;
+    left: 0;
+    z-index: 3;
+    -webkit-transition: left 1500ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 50ms;
+       -moz-transition: left 1500ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 50ms;
+         -o-transition: left 1500ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 50ms;
+            transition: left 1500ms cubic-bezier(0.165, 0.840, 0.440, 1.000) 50ms; /* easeOutQuart */
 
 }
 
@@ -117,24 +119,24 @@
 }
 
 .slidyContainer .slidySlides figure {
-	margin: 0;
-	position: absolute;
-	top: 0;
-	left: 100%;
-	height: 450px;
-	width: 100%;
-	z-index: 2;
-	}
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    height: 450px;
+    width: 100%;
+    z-index: 2;
+    }
 
 .slidyContainer .slidySlides img {
   margin: 0;
-	height: auto;
-	width: 100%;
-	position:absolute;
-  -webkit-transition: opacity 1500ms cubic-bezier(0.250, 0.100, 0.250, 1.000) 100ms;
-     -moz-transition: opacity 1500ms cubic-bezier(0.250, 0.100, 0.250, 1.000) 100ms;
-       -o-transition: opacity 1500ms cubic-bezier(0.250, 0.100, 0.250, 1.000) 100ms;
-          transition: opacity 1500ms cubic-bezier(0.250, 0.100, 0.250, 1.000) 100ms; /* ease (default) */
+    height: auto;
+    width: 100%;
+    position:absolute;
+  -webkit-transition: opacity 2000ms cubic-bezier(0.250, 0.100, 0.250, 1.000) 100ms;
+     -moz-transition: opacity 2000ms cubic-bezier(0.250, 0.100, 0.250, 1.000) 100ms;
+       -o-transition: opacity 2000ms cubic-bezier(0.250, 0.100, 0.250, 1.000) 100ms;
+          transition: opacity 2000ms cubic-bezier(0.250, 0.100, 0.250, 1.000) 100ms; /* ease (default) */
   -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
   opacity: 1;
 
@@ -145,7 +147,7 @@
 */
 
 .slidyContainer .slidySlides figure.slidyCurrent figcaption {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .slidyContainer .slidySlides figcaption {
@@ -155,13 +157,13 @@
   left: 20%;
   z-index: 9;
   padding: 0.2em 0.4em;
-	color: GhostWhite;
-	font-family: Nobile, Helvetica, Arial, sans-serif;
+  color: GhostWhite;
+  font-family: Nobile, Helvetica, Arial, sans-serif;
   font-size: 1.7em;
   font-weight: bold;
   line-height: 1;
   text-align: center;
-  text-shadow:  0px 0px 2px #444;
+  text-shadow: 1px 1px 1px  #000;
 
   -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
   opacity: 0;

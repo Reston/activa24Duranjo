@@ -149,7 +149,7 @@
       moveNext: 'moveNext', // Div id to use for next button
       useKeybord: true, // use keys defined below to expand / collapse sections
       auto: true,       // Start slideshow automatically
-      interval: 6000,     // Time between each slide
+      interval: 8000,     // Time between each slide
       initialInterval: 10000  // Initial interval when page loads
       };
 
