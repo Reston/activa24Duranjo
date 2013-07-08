@@ -1,5 +1,5 @@
 /*
-* © 2011 D MALAM
+* © 2011 D MALAM and modification of Reston © 2013
 * MIT License
 * Responsly.js Slidy jQuery Plugin
 * Edit as needed
