@@ -7,6 +7,9 @@ header{
 	background: black;
 	background: rgba(56, 75, 213, 0.8)
 }
+.contactoInfo p{
+	text-shadow: 0 0 4px black;
+}
 /* Primer banner section */
 .sliderPosition{
 	width: 100%;
