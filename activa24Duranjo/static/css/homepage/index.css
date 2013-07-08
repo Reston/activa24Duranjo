@@ -4,13 +4,12 @@
 	background: rgba(56, 75, 213, 0.8)
 }
 /* Primer banner section */
-.bannerPrincipal{
+.sliderPosition{
 	width: 100%;
 	height: 600px;
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: white url('../../img/camaras.jpg');
 	color: transparent;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;

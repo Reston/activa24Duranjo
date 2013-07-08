@@ -11,10 +11,12 @@ Duranjo Web
 {% endblock%}
 {% block css%}
 <link rel="stylesheet" href="{% static 'css/homepage/index.css' %}">
+<link rel="stylesheet" href="{% static 'css/slidy.css' %}">
 {% endblock %}
 {% block js %}
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script type="text/javascript" src="{% static 'js/adquiridos/back-top.js' %}"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="{% static 'js/adquiridos/back-top.js' %}"></script>
+<script src="{% static 'js/adquiridos/slidy.js' %}"></script>
 {% endblock %}
 {% block navi %}
 		<ul>
@@ -25,12 +27,41 @@ Duranjo Web
 		</ul>				
 {% endblock %}
 {% block contenido %}
-	<div class="bannerPrincipal"></div>
-	<section class="sliderText">
-		<div class="wrapper banner1">
-			<div class="tituloh2"><h2>Slider Titulo</h2></div>
-			<p>Purus eu sed facilisis. A mattis! Augue ridiculus placerat dolor ac phasellus habitasse augue urna sit, in porta. Phasellus pellentesque odio est porttitor. Tincidunt? Pulvinar magnis, ultricies! Turpis vel scelerisque nisi augue, purus integer enim nec! Placerat mid dignissim vel, facilisis penatibus magna urna magna rhoncus aliquam scelerisque, elementum aliquam lorem. Duis augue risus aliquet. Magnis et porta sagittis parturient! Mid porttitor tortor cum sociis nisi? Sociis rhoncus est magnis lectus sit nisi elementum scelerisque, ridiculus integer diam tristique hac. Dapibus in dis ultrices, turpis, facilisis, cum cras duis urna, porttitor et nisi, pulvinar, sagittis. Enim velit nec dignissim nunc, augue hac ut phasellus? Odio, nunc placerat dignissim, dis diam porttitor enim, egestas ac, cursus adipiscing? Habitasse, sociis, ultrices magnis nec cum. Ac ac massa sit, arcu massa nunc elementum porta placerat parturient ac nascetur a, ac penatibus a pulvinar sed integer magna sagittis! Scelerisque ac augue habitasse tortor magnis.</p>
+	<div class="sliderPosition">
+		<div id="slidyBanner" class="slidyContainer" title="Your tooltip text">
+			<div class="slidySlides">
+				<!-- Each slide is wrapped in figure section -->
+
+					<!-- Slide 1 -->
+					<!-- add the 'slidyCurrent' class to which slide you want as default -->
+					<figure class="slidyCurrent">
+						<!-- Your context goes here -->
+						<img src="{% static 'img/camaras.jpg' %}" alt="alt text persona">
+						<!-- Use the figcaption element to add captions -->
+						<figcaption>An Image</figcaption>
+					</figure>
+
+					<!-- Slide 2 -->
+					<figure>
+						<img  alt="Shanghai, China"  src="{% static 'img/camaravigilancia.jpg' %}">
+						<figcaption>Another image</figcaption>
+					</figure>
+
+					<!-- Slide 3 -->
+					<figure>
+						I am some text
+						Your not limited to images, you can have what ever you want 
+						<figcaption>Text</figcaption>
+					</figure>
+					<figure>
+						<img src="{% static 'img/camaras.jpg' %}" alt="alt text persona">
+						<figcaption>Persona en el poste</figcaption>
+					</figure>
+					<!-- Add more slides as necessary -->
+			</div>
 		</div>
+	</div>
+	<section id="slider" class="sliderText">
 	</section>
 	<section class="aboutus">
 		<div class="wrapper">
@@ -88,9 +119,9 @@ Duranjo Web
 		<script  async type="text/javascript">
 		 window.___gcfg = {lang: 'es-419'};
 		 (function() {
-		    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
 		   po.src = 'https://apis.google.com/js/plusone.js';
-		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
 		  })();
 		</script>
 	<!-- FACEBOOK SCRIPT -->
@@ -104,7 +135,10 @@ Duranjo Web
 		}(document, 'script', 'facebook-jssdk'));</script>
 	<!-- TWITTER SCRIPT -->
 	<script async>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-	
+	<!-- SLIDER INIT -->
+	<script>
+		$('.slidyContainer').slidy({});
+	</script>
 	<!-- BACK TOP BOX -->
 	<div id="back-top" class="back-top">
 		<a href="#home"><span>↑</span>Regresar arriba</a>
