@@ -49,10 +49,10 @@
 	width: 150px;
 }
 .productBoton{
-	background: gray;
+	background: #6A6B6B;
 	color: white;
 	text-align: center;
-	height: 35px;
+	height: 40px;
 	line-height: 35px;
 }
 .ultimosProductos .wrapper .productContainer{

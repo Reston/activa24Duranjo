@@ -54,6 +54,7 @@ header .logo img{
 }
 .barraNavegacion ul li{
 	display: inline-block;
+	font-size: 14px;
 }
 .barraNavegacion a{
 	background: black;
