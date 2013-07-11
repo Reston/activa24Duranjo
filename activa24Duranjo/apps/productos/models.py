@@ -14,7 +14,7 @@ class Categoria(models.Model):
 
 class Producto(models.Model):
 	titulo = models.CharField(max_length=200)
-	descripcion_corta = models.CharField(max_length=140,help_text='Hasta 140 caracteres')
+	descripcion_corta = models.CharField(max_length=140, help_text='Hasta 140 caracteres')
 	descripcion = HTMLField()
 	categoria = models.ForeignKey(Categoria)
 	precio_dolares = models.DecimalField(max_digits=30, decimal_places=3)
