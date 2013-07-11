@@ -87,6 +87,10 @@ footer > .wrapper > div{
 .footer-der, .footer-med, .footer-izq{
 	width: 33%;
 }
+.skypeComponente > p{
+	margin: 0;
+	height: 70px;
+}
 .facebookIcon{
 	background: url('../img/logosblancos.png') 34px -6px;
 	width: 35px;
@@ -108,8 +112,8 @@ footer > .wrapper > div{
 .logovadecol{
 	margin: 0 auto 0 auto;
 	background: url('../img/logosblancos.png') -259px 0;
-	width: 110px;
-	height: 100px;
+	width: 65px;
+	height: 65px;
 }
 .listaMenuFooter{
 	list-style: none;
@@ -131,7 +135,6 @@ footer > .wrapper > div{
 	text-align: center;
 }
 /* END FOOTER */
-
 /* Configuración back to top button */
 
 .back-top {

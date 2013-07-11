@@ -10,6 +10,20 @@ header{
 .contactoInfo p{
 	text-shadow: 0 0 4px black;
 }
+/* Configuración slider */
+.flexslider{
+	overflow: hidden;
+	height: 560px;
+	zoom: 1;
+}
+.slides{
+	margin: 0;
+	padding: 0;
+}
+.flexslider .slides img{
+	width: 100%;
+	height: auto;
+}
 /* Primer banner section */
 .sliderPosition{
 	width: 100%;

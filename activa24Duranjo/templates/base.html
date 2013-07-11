@@ -40,7 +40,7 @@
 					<p>RIF: J-40172941-0</p>
 				</div>
 				<div class="contactoInfo">
-					<p>Teléfonos: +58 265 6319998 y +58 261 6312043</p>
+					<p>Teléfonos: (+58) 265 631 9998 | (+58) 261 631 2043</p>
 					<img src="{% static 'img/banderita.png' %}" alt="bandera de Venezuela">					
 				</div>	
 			</div>		
@@ -62,17 +62,22 @@
 		{% block footer %}{% endblock%}
 		<div class="wrapper">
 			<div class="footer-der">
+				<div id="SkypeButton_Dropdown_restonvzla_1" class="skypeComponente"></div>
 				<ul class="listaMenuFooter">
 					<li><a href="{% url 'homepageindex' %}">INICIO</a></li>
 					<li><a href="{% url 'homepageabout' %}">SOBRE NOSOTROS</a></li>
 					<li><a href="{% url 'homepageserviciosyproductos' %}">PRODUCTOS Y SERVICIOS</a></li>
 					<li><a href="{% url 'homapagecontact' %}">CONTACTO</a></li>
-				</ul>				
-				<a href="https://www.facebook.com/activa24"><div class="facebookIcon"></div></a>
+				</ul>	
+				<div class="redesSociales">
+					<a href="https://www.facebook.com/activa24"><div class="facebookIcon"></div></a>
+					<a href="https://www.twitter.com/activa24"><div class="facebookIcon"></div></a>
+				</div>			
 			</div>
 			<div class="footer-med">
 				<div class="logoactiva24"></div>
-				<p>Pertenece a la corporación VADECOL</p>
+				<p>Empresas aliadas</p>
+				<!-- mas pequeño logo abajo -->
 				<div class="logovadecol"></div>
 			</div>
 			<div class="footer-izq">
@@ -82,8 +87,18 @@
 						<img src="{% static 'img/duranjowhite.png' %}" alt="Duranjo Web C.A. Logo">
 					</a>
 				</div>
-			</div>		  
+			</div>
 		</div>
 	</footer>
+	<!-- SKYPE icon-->
+	<script type="text/javascript" src="http://cdn.dev.skype.com/uri/skype-uri.js"></script>
+	<script type="text/javascript">
+					    Skype.ui({
+					      "name": "dropdown",
+					      "element": "SkypeButton_Dropdown_restonvzla_1",
+					      "participants": ["restonvzla"],
+					      "imageSize": 32
+					    });
+	</script>
 </body>
 </html>

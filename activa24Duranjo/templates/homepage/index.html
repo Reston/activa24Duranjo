@@ -7,16 +7,16 @@ diseño de páginas web, software y diseño gráfico. Además de ofrecer diferen
 <meta name="msvalidate.01" content="5C0D61EB459CD0F5B9245FEA8F798DAA" />
 {% endblock%}
 {% block title %}
-Duranjo Web
+Página principal - Activa24 C.A.
 {% endblock%}
 {% block css%}
 <link rel="stylesheet" href="{% static 'css/homepage/index.css' %}">
-<link rel="stylesheet" href="{% static 'css/slidy.css' %}">
+<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
 {% endblock %}
 {% block js %}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script src="{% static 'js/adquiridos/back-top.js' %}"></script>
-<script src="{% static 'js/adquiridos/slidy.js' %}"></script>
+<script src="{% static 'js/adquiridos/jquery.flexslider-min.js' %}"></script>
 {% endblock %}
 {% block navi %}
 		<ul>
@@ -28,38 +28,15 @@ Duranjo Web
 {% endblock %}
 {% block contenido %}
 	<div class="sliderPosition">
-		<div id="slidyBanner" class="slidyContainer" title="Your tooltip text">
-			<div class="slidySlides">
-				<!-- Each slide is wrapped in figure section -->
-
-					<!-- Slide 1 -->
-					<!-- add the 'slidyCurrent' class to which slide you want as default -->
-					<figure class="slidyCurrent">
-						<!-- Your context goes here -->
-						<img src="{% static 'img/camaras.jpg' %}" alt="alt text persona">
-						<!-- Use the figcaption element to add captions -->
-						<figcaption>An Image</figcaption>
-					</figure>
-
-					<!-- Slide 2 -->
-					<figure>
-						<img  alt="Shanghai, China"  src="{% static 'img/camaravigilancia.jpg' %}">
-						<figcaption>Another image</figcaption>
-					</figure>
-
-					<!-- Slide 3 -->
-					<figure>
-						I am some text
-						Your not limited to images, you can have what ever you want 
-						<figcaption>Text</figcaption>
-					</figure>
-					<figure>
-						<img src="{% static 'img/camaras.jpg' %}" alt="alt text persona">
-						<figcaption>Persona en el poste</figcaption>
-					</figure>
-					<!-- Add more slides as necessary -->
-			</div>
-		</div>
+		<div class="flexslider">
+		  <ul class="slides">
+			<li>
+				<img src="{% static 'img/camaras.jpg' %}" />
+			</li>
+			<li>
+				<img src="{% static 'img/camaravigilancia.jpg' %}" />
+			</li>
+		</div>		
 	</div>
 	<section id="slider" class="sliderText">
 	</section>
@@ -137,7 +114,10 @@ Duranjo Web
 	<script async>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 	<!-- SLIDER INIT -->
 	<script>
-		$('.slidyContainer').slidy({});
+		$(window).load(function() {
+		  $('.flexslider').flexslider({
+		  });
+		});
 	</script>
 	<!-- BACK TOP BOX -->
 	<div id="back-top" class="back-top">
