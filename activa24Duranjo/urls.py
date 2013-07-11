@@ -15,6 +15,7 @@ urlpatterns = patterns(
 	# url(r'^activa24Duranjo/', include('activa24Duranjo.foo.urls')),
 	url(r'^', include('activa24Duranjo.apps.homepage.urls')),
 	url(r'^', include('activa24Duranjo.apps.productos.urls')),
+	url(r'^tinymce/', include('tinymce.urls')),
 	# Uncomment the admin/doc line below to enable admin documentation:
 	# url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
