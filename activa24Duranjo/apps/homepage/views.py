@@ -5,10 +5,13 @@ from activa24Duranjo.apps.homepage.forms import *
 from django.template import RequestContext
 from django.core.mail import send_mail
 from activa24Duranjo.apps.productos.models import *
+from activa24Duranjo.apps.slider.models import SliderItem
 
 
 def index(request):
-	return render_to_response('homepage/index.html', context_instance=RequestContext(request))
+	slideritem = SliderItem.objects.all()
+	ctx = {'slideritem': slideritem}
+	return render_to_response('homepage/index.html', ctx, context_instance=RequestContext(request))
 
 
 def about(request):
@@ -19,8 +22,8 @@ def about(request):
 
 
 def serviciosyproductos(request):
-	categorias= Categoria.objects.all()
-	ctx= {'categorias': categorias}
+	categorias = Categoria.objects.all()
+	ctx = {'categorias': categorias}
 	return render_to_response('homepage/serviciosproductos.html', ctx, context_instance=RequestContext(request))
 
 

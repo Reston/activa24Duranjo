@@ -97,6 +97,12 @@ footer > .wrapper > div{
 	height: 35px;
 	float: left;
 }
+.twitterIcon{
+	background: url('../img/logosblancos.png') 35px -40px;
+	width: 35px;
+	height: 35px;
+	float: left;
+}
 .footer-med img{
 	width: 256px;
 }

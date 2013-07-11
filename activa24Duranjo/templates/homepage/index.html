@@ -30,12 +30,11 @@ Página principal - Activa24 C.A.
 	<div class="sliderPosition">
 		<div class="flexslider">
 		  <ul class="slides">
-			<li>
-				<img src="{% static 'img/camaras.jpg' %}" />
-			</li>
-			<li>
-				<img src="{% static 'img/camaravigilancia.jpg' %}" />
-			</li>
+		  	{% if slideritem %}
+		  		{% for item in slideritem %}
+		  			<li><img src="{{item.image.url}}" alt="{{item.title}}"></li>
+		  		{% endfor %}
+		  	{% endif %}
 		</div>		
 	</div>
 	<section id="slider" class="sliderText">

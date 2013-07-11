@@ -131,6 +131,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     'activa24Duranjo.apps.productos',
+    'activa24Duranjo.apps.slider',
     'tinymce',
     # Uncomment the next line to enable admin documentation:
     #'django.contrib.admindocs',

@@ -1,12 +1,13 @@
-# coding: latin-1
+# coding: utf-8
 from django.db import models
 from tinymce.models import HTMLField
 
 
 class Categoria(models.Model):
 	titulo = models.CharField(max_length=200)
-	breve_descripcion = models.CharField(max_length=140) 
+	breve_descripcion = models.CharField(max_length=140)
 	imagen = models.ImageField(upload_to='imgcategorias')
+
 	def __unicode__(self):
 		return self.titulo
 
@@ -17,10 +18,11 @@ class Producto(models.Model):
 	descripcion = HTMLField()
 	categoria = models.ForeignKey(Categoria)
 	precio_dolares = models.DecimalField(max_digits=30, decimal_places=3)
+
 	def __unicode__(self):
-		return self.titulo	
-		
+		return self.titulo
+
+
 class ImgProductos(models.Model):
 	producto = models.ForeignKey(Producto, related_name='imagenes')
 	imagen = models.ImageField(upload_to='imgproductos')
-
