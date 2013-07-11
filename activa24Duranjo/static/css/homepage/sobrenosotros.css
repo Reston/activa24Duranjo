@@ -13,12 +13,15 @@ h2{
 }
 .sobreNosotros{
 	background: url('../../img/lineaabout.png') no-repeat center 30px, url('../../img/cream_dust_@2X.png');
-	padding: 80px 0 0 0;
+	padding: 60px 0 0 0;
 	border-top: 5px solid #CCCCCC;
 }
 /* Section quines somos*/
 .quienesSomos, .mision, .vision{
-	height: 510px;
+	height: 460px;
+}
+.vision{
+	margin-top: 90px;
 }
 .sobreNosotros img{/* MIENTRAS PRUEBAS IMAGENES!!!!!!!*/
 	width: 510px;
@@ -29,12 +32,18 @@ h2{
 .infoQuienesSomos{
 	width: 45%;
 	float: right;
+	text-align: justify;
+	line-height: 2em;
 }
 .infoMision{
 	width: 45%;
 	float: left;
+	text-align: justify;
+	line-height: 2em;
 }
 .infoVision{
 	width: 45%;
 	float:right;
+	text-align: justify;
+	line-height: 2em;
 }
