@@ -11,7 +11,6 @@
 	padding: 50px 0;
 	border-top: 5px solid #CCCCCC;
 	background: url('../../img/cream_dust_@2X.png');
-	z-index: -1;
 }
 .logoAgua{
 	background: url('../../img/activa24logo.png') no-repeat;
@@ -26,13 +25,15 @@
 	-o-transform:scale(1.4);
 	transform:scale(1.4);
 	opacity: 0.1;
-	z-index: -1;
+	z-index: 1;
 }
 /* Contacto izq */
 .formularioContacto{
+	position: relative;
 	vertical-align: top;
 	display: inline-block;
 	width: 49%;
+	z-index: 5;
 }
 .campo{
 	height: 75px;
@@ -69,12 +70,14 @@ input[type="submit"]{
 
 /* Contacto der */
 .informacionContacto{
+	position: relative;
 	vertical-align: top;
 	display: inline-block;
 	width: 49%;
+	z-index: 5;
 }
 .map{
-	width: 400px;
+	width: 490px;
 	height: 350px;
 	background: #3953A0;
 }

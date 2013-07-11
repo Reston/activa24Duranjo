@@ -14,7 +14,6 @@ header{
 .flexslider{
 	overflow: hidden;
 	height: 560px;
-	zoom: 1;
 }
 .slides{
 	margin: 0;
