@@ -42,7 +42,7 @@ Categorías de servicios y productos - Activa24 C.A.
 		{% for categoria in categorias %}
 			<div class="categoriaContainer">
 				<img src="{{ MEDIA_URL }}/{{ categoria.imagen }}"/>
-				<a href="{{ categoria.get_absolute_url }}"<div class="categoriaTitulo">{{ categoria.titulo }}</div>
+				<a href="{{ categoria.get_absolute_url }}"><div class="categoriaTitulo">{{ categoria.titulo }}</div></a>
 				<div class="categoriaDescripcion">
 				{{ categoria.breve_descripcion }}
 				</div>
