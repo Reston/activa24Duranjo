@@ -39,73 +39,15 @@ Categorías de servicios y productos - Activa24 C.A.
 		</section>
 		<section class="contenidoServicios">
 			<!-- Example area of products -->
+		{% for categoria in categorias %}
 			<div class="categoriaContainer">
-				<img src="{% static 'img/camaravigilancia.jpg' %}" alt="Cámara de vigilancia">
-				<div class="categoriaTitulo">Nombre de la categoría</div>
+				<img src="{{ MEDIA_URL }}/{{ categoria.imagen }}"/>
+				<div class="categoriaTitulo">{{ categoria.titulo }}</div>
 				<div class="categoriaDescripcion">
-					<ul class="productList">
-						<li>Modelo: LS-DM 4688 ASDASD FF</li>
-						<li>Kit de cuatro cámaras con DVR de 4</li>
-						<li>Canales de grabación tiempo real</li>
-					</ul>
+				{{ categoria.breve_descripcion }}
 				</div>
 			</div>
-			<div class="categoriaContainer">
-				<img src="{% static 'img/camaravigilancia.jpg' %}" alt="Cámara de vigilancia">
-				<div class="categoriaTitulo">Nombre de la categoría</div>
-				<div class="categoriaDescripcion">
-					<ul class="productList">
-						<li>Modelo: LS-DM 4688 ASDASD FF</li>
-						<li>Kit de cuatro cámaras con DVR de 4</li>
-						<li>Canales de grabación tiempo real</li>
-					</ul>
-				</div>
-			</div>
-			<div class="categoriaContainer">
-				<img src="{% static 'img/camaravigilancia.jpg' %}" alt="Cámara de vigilancia">
-				<div class="categoriaTitulo">Nombre de la categoría</div>
-				<div class="categoriaDescripcion">
-					<ul class="productList">
-						<li>Modelo: LS-DM 4688 ASDASD FF</li>
-						<li>Kit de cuatro cámaras con DVR de 4</li>
-						<li>Canales de grabación tiempo real</li>
-					</ul>
-				</div>
-			</div>
-			<div class="categoriaContainer">
-				<img src="{% static 'img/camaravigilancia.jpg' %}" alt="Cámara de vigilancia">
-				<div class="categoriaTitulo">Nombre de la categoría</div>
-				<div class="categoriaDescripcion">
-					<ul class="productList">
-						<li>Modelo: LS-DM 4688 ASDASD FF</li>
-						<li>Kit de cuatro cámaras con DVR de 4</li>
-						<li>Canales de grabación tiempo real</li>
-					</ul>
-				</div>
-			</div>
-			<div class="categoriaContainer">
-				<img src="{% static 'img/camaravigilancia.jpg' %}" alt="Cámara de vigilancia">
-				<div class="categoriaTitulo">Nombre de la categoría</div>
-				<div class="categoriaDescripcion">
-					<ul class="productList">
-						<li>Modelo: LS-DM 4688 ASDASD FF</li>
-						<li>Kit de cuatro cámaras con DVR de 4</li>
-						<li>Canales de grabación tiempo real</li>
-					</ul>
-				</div>
-			</div>
-			<div class="categoriaContainer">
-				<img src="{% static 'img/camaravigilancia.jpg' %}" alt="Cámara de vigilancia">
-				<div class="categoriaTitulo">Nombre de la categoría</div>
-				<div class="categoriaDescripcion">
-					<ul class="productList">
-						<li>Modelo: LS-DM 4688 ASDASD FF</li>
-						<li>Kit de cuatro cámaras con DVR de 4</li>
-						<li>Canales de grabación tiempo real</li>
-					</ul>
-				</div>
-			</div>
-			<!-- Example area of products -->
+		{% endfor %}
 		</section>
 	</div>
 </section>

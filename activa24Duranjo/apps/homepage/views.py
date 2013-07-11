@@ -4,6 +4,7 @@ from django.shortcuts import render_to_response
 from activa24Duranjo.apps.homepage.forms import *
 from django.template import RequestContext
 from django.core.mail import send_mail
+from activa24Duranjo.apps.productos.models import *
 
 
 def index(request):
@@ -18,7 +19,9 @@ def about(request):
 
 
 def serviciosyproductos(request):
-	return render_to_response('homepage/serviciosproductos.html', context_instance=RequestContext(request))
+	categorias= Categoria.objects.all()
+	ctx= {'categorias': categorias}
+	return render_to_response('homepage/serviciosproductos.html', ctx, context_instance=RequestContext(request))
 
 
 def contact(request):
