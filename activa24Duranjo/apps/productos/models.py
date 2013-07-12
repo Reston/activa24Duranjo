@@ -1,6 +1,7 @@
 # coding: utf-8
 from django.db import models
 from tinymce.models import HTMLField
+from django.core.urlresolvers import reverse
 
 
 class Categoria(models.Model):
@@ -11,11 +12,9 @@ class Categoria(models.Model):
 	def __unicode__(self):
 		return self.titulo
 
-	@models.permalink
 	def get_absolute_url(self):
-		titulo = self.titulo.replace(' ', '-')
-		return ('categoria', {'titulo': titulo})
-
+		titulo = self.titulo.replace(' ', '_')
+		return reverse('app_name:categoria',kwargs={'titulo':self.titulo})
 
 class Producto(models.Model):
 	titulo = models.CharField(max_length=200)

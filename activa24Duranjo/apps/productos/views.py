@@ -9,4 +9,5 @@ def producto(request):
 
 
 def categoria(request):
+	print "kkkkkkkkkkkk"
 	return render_to_response('productos/categoria.html', context_instance=RequestContext(request))
