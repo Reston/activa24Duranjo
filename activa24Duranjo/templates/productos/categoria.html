@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load url from future %}
 {% load staticfiles %}
+{% load custom_filters %}s
 {% block head %} 
 <meta name="description" content="Página oficial de la empresa Duranjo Web C.A. que desarrolla soluciones informaticas para 
 diseño de páginas web, software y diseño gráfico. Además de ofrecer diferentes planes accesibles a cualquier tipo de cliente. Innovación, estilo y creatividad es nuestro ideal.">
@@ -28,7 +29,7 @@ Lista de producto de la categoría #colocar categoria name# - Activa24 C.A.
 <section class="categoria">
 	<div class="wrapper">
 		<section class="oferta">
-			<div class="tituloh2"><h2>Nombre de la categoría</h2></div>
+			<div class="tituloh2"><h2>{{ categoria.titulo }}</h2></div>
 			<!-- Se debe hacer un modulo para cargar estas dos imagenes o hacerlo manual estableciendo dos nombres y cambiar eso y ya-->
 			<div class="ofertaizq">
 				<img src="{% static 'img/logodummy.png' %}" alt="logo dummy" style="width: 460px;">
@@ -41,50 +42,15 @@ Lista de producto de la categoría #colocar categoria name# - Activa24 C.A.
 			<h2>Productos</h2>
 			<div class="listaProductos">
 			<!-- Example area of products -->
+				{% for producto in productos %}
 				<div class="productoContainer">
-					<img src="{% static 'img/camaravigilancia.jpg' %}" alt="Cámara de vigilancia">
-					<div class="productoTitulo">Nombre de la categoría</div>
+					<img src="{{ MEDIA_URL }}/{{ imagenes|getimagen:producto.id}}"/>
+					<div class="productoTitulo">{{ producto.titulo }}</div>
 					<div class="productoDescripcion">
-						<ul class="productList">
-							<li>Modelo: LS-DM 4688 ASDASD FF</li>
-							<li>Kit de cuatro cámaras con DVR de 4</li>
-							<li>Canales de grabación tiempo real</li>
-						</ul>
+						{{ producto.descripcion_corta }}
 					</div>
 				</div>
-				<div class="productoContainer">
-					<img src="{% static 'img/camaravigilancia.jpg' %}" alt="Cámara de vigilancia">
-					<div class="productoTitulo">Nombre de la categoría</div>
-					<div class="productoDescripcion">
-						<ul class="productList">
-							<li>Modelo: LS-DM 4688 ASDASD FF</li>
-							<li>Kit de cuatro cámaras con DVR de 4</li>
-							<li>Canales de grabación tiempo real</li>
-						</ul>
-					</div>
-				</div>
-				<div class="productoContainer">
-					<img src="{% static 'img/camaravigilancia.jpg' %}" alt="Cámara de vigilancia">
-					<div class="productoTitulo">Nombre de la categoría</div>
-					<div class="productoDescripcion">
-						<ul class="productList">
-							<li>Modelo: LS-DM 4688 ASDASD FF</li>
-							<li>Kit de cuatro cámaras con DVR de 4</li>
-							<li>Canales de grabación tiempo real</li>
-						</ul>
-					</div>
-				</div>
-				<div class="productoContainer">
-					<img src="{% static 'img/camaravigilancia.jpg' %}" alt="Cámara de vigilancia">
-					<div class="productoTitulo">Nombre de la categoría</div>
-					<div class="productoDescripcion">
-						<ul class="productList">
-							<li>Modelo: LS-DM 4688 ASDASD FF</li>
-							<li>Kit de cuatro cámaras con DVR de 4</li>
-							<li>Canales de grabación tiempo real</li>
-						</ul>
-					</div>
-				</div>
+				{% endfor %}
 			</div>
 		</section>
 		<section class="otrasCategorias">
