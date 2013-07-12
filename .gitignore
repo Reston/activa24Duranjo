@@ -47,6 +47,8 @@ $RECYCLE.BIN/
 *.egg
 *.egg-info
 dist/
+imgproductos/
+imgcategorias/
 build/
 eggs/
 parts/
