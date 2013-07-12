@@ -45,8 +45,15 @@ header{
 	border-top: 1px solid #bfbfbf;
 	padding: 20px 0;
 }
+.textoSobreNosotros{
+	width: 80%;
+	text-align: justify;
+	display: inline-block;
+	vertical-align: top;
+}
 .monitorCamaras{
-	float: left;
+	width: 19%;
+	display: inline-block;
 }
 .monitorCamaras img{
 	width: 150px;
