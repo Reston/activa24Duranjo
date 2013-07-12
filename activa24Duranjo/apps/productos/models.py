@@ -14,7 +14,8 @@ class Categoria(models.Model):
 
 	def get_absolute_url(self):
 		titulo = self.titulo.replace(' ', '_')
-		return reverse('categoria',kwargs={'titulo':titulo})
+		return reverse('categoria', kwargs={'titulo': titulo})
+
 
 class Producto(models.Model):
 	titulo = models.CharField(max_length=200)
