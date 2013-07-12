@@ -38,16 +38,19 @@ Categorías de servicios y productos - Activa24 C.A.
 			</div>
 		</section>
 		<section class="contenidoServicios">
+		<h2>Categorías</h2>
 		<!-- Area of products -->
-		{% for categoria in categorias %}
-			<a href="{{ categoria.get_absolute_url }}"><div class="categoriaContainer">
-				<img src="{{ MEDIA_URL }}/{{ categoria.imagen }}"/>
-				<div class="categoriaTitulo">{{ categoria.titulo }}</div>
-				<div class="categoriaDescripcion">
-				{{ categoria.breve_descripcion }}
-				</div>
-			</div></a>
-		{% endfor %}
+		<div class="listaProductos">
+			{% include page_template %}
+				<script src="http://code.jquery.com/jquery-latest.js"></script>
+				<script src="{{ STATIC_URL }}endless_pagination/js/endless-pagination.js"></script>
+				<script>
+					$.endlessPaginate({
+						paginateOnScroll: true,
+						paginateOnScrollMargin: 200
+					});
+				</script>
+			</div>
 		</section>
 	</div>
 </section>

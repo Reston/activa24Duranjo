@@ -1,0 +1,13 @@
+{% load custom_filters %}
+{% load endless %}
+{% paginate categorias %}
+{% for categoria in categorias %}
+	<a href="{{ categoria.get_absolute_url }}"><div class="categoriaContainer">
+		<img src="{{ MEDIA_URL }}/{{ categoria.imagen }}"/>
+		<div class="categoriaTitulo">{{ categoria.titulo }}</div>
+		<div class="categoriaDescripcion">
+		{{ categoria.breve_descripcion }}
+		</div>
+	</div></a>
+{% endfor %}
+{% show_more %}

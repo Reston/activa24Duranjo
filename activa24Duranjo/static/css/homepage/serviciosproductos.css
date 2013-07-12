@@ -62,3 +62,15 @@
 	height: 35px;
 	line-height: 35px;
 }
+
+.endless_container{
+	text-align: center;
+	margin-top: 30px;
+}
+.endless_more{
+	text-decoration: none;
+	color: black;
+	background: #E6E7E7;
+	padding: 10px 15px;
+	box-shadow: 0 0 8px #777;
+}

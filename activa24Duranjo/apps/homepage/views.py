@@ -21,10 +21,12 @@ def about(request):
 	return render_to_response('homepage/sobrenosotros.html', ctx, context_instance=RequestContext(request))
 
 
-def serviciosyproductos(request):
+def serviciosyproductos(request, template='homepage/serviciosproductos.html', page_template='homepage/serviciosproductos_categorias.html'):
 	categorias = Categoria.objects.all()
-	ctx = {'categorias': categorias}
-	return render_to_response('homepage/serviciosproductos.html', ctx, context_instance=RequestContext(request))
+	if request.is_ajax():
+		template = page_template
+	ctx = {'categorias': categorias, 'page_template': page_template}
+	return render_to_response(template, ctx, context_instance=RequestContext(request))
 
 
 def contact(request):
