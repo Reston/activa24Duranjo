@@ -26,6 +26,46 @@ Producto #name# - Activa24 C.A.
 {% endblock %}
 {% block contenido %}
 <section class="producto">
-	
+	<div class="wrapper">
+		<div class="tituloh2"><h2>Nombre del producto</h2></div>
+		<section class="cuadro">
+			<div class="sliderContainer"></div>
+			<div class="miniDescripcion">
+				<h3>Precio: 9999.99 Bs.</h3>
+				<div class="mini">
+					lit montes sed turpis scelerisque diam! In adipiscing integer, a tristique elementum, velit amet odio ultrices quis ridiculus, pellentesque et adipiscing, nunc, rhoncus? Lundium scelerisque magna, nunc pulvinar ac ut, mid platea ac cum, in nunc? Nunc urna, amet cum tincidunt in? Aliquet mus eu, dolor, tortor porta. Pulvinar pid! Urna integer pid ac a dis, et turpis, tortor arcu magna in. Porta arcu enim sed.
+				</div>
+			</div>
+		</section>
+		<section class="productos">
+			<h2>Descripción</h2>
+			<p>
+				Phasellus lorem dignissim adipiscing adipiscing tincidunt ultrices? Placerat, egestas elementum platea habitasse tincidunt, sed tincidunt rhoncus dapibus est placerat, turpis. Etiam non adipiscing? Lorem mattis amet, urna cum elementum diam cursus integer nunc mattis sed scelerisque, cum pid, turpis ut velit, amet nunc lundium dictumst sed turpis et? Montes massa turpis! Placerat pulvinar risus, velit montes sed turpis scelerisque diam! In adipiscing integer, a tristique elementum, velit amet odio ultrices quis ridiculus, pellentesque et adipiscing, nunc, rhoncus? Lundium scelerisque magna, nunc pulvinar ac ut, mid platea ac cum, in nunc? Nunc urna, amet cum tincidunt in? Aliquet mus eu, dolor, tortor porta. Pulvinar pid! Urna integer pid ac a dis, et turpis, tortor arcu magna in. Porta arcu enim sed.
+
+				<h3>Heading 2</h3>
+
+				Phasellus lorem dignissim adipiscing adipiscing tincidunt ultrices? Placerat, egestas elementum platea habitasse tincidunt, sed tincidunt rhoncus dapibus est placerat, turpis. Etiam non adipiscing? Lorem mattis amet, urna cum elementum diam cursus 
+
+				<ul>
+					<li>item1</li>
+					<li>item2</li>
+					<li>item3</li>
+				</ul>
+
+				Fin!
+			</p>
+		</section>
+		<div class="fb-comments" data-href="URL URL URL URL" data-width="470" data-num-posts="10"></div>
+	</div>
 </section>
+
+<!-- FACEBOOK SCRIPT -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 {% endblock %}
