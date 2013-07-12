@@ -133,6 +133,7 @@ INSTALLED_APPS = (
     'activa24Duranjo.apps.productos',
     'activa24Duranjo.apps.slider',
     'tinymce',
+    'endless_pagination',
     # Uncomment the next line to enable admin documentation:
     #'django.contrib.admindocs',
 )
@@ -165,7 +166,6 @@ LOGGING = {
         },
     }
 }
-
 TEMPLATE_CONTEXT_PROCESSOR = (
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.i18n',
@@ -175,7 +175,13 @@ TEMPLATE_CONTEXT_PROCESSOR = (
     'django.core.context_processors.static',
 )
 
+#configuracion endless-pagination
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
+TEMPLATE_CONTEXT_PROCESSORS += (
+    'django.core.context_processors.request',
+)
 
+ENDLESS_PAGINATION_PER_PAGE = 12
 #Configuraciones para enviar mensajes usando gmail
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load url from future %}
 {% load staticfiles %}
-{% load custom_filters %}s
+{% load custom_filters %}
 {% block head %} 
 <meta name="description" content="Página oficial de la empresa Duranjo Web C.A. que desarrolla soluciones informaticas para 
 diseño de páginas web, software y diseño gráfico. Además de ofrecer diferentes planes accesibles a cualquier tipo de cliente. Innovación, estilo y creatividad es nuestro ideal.">
@@ -41,16 +41,15 @@ Lista de producto de la categoría #colocar categoria name# - Activa24 C.A.
 		<section class="productos">
 			<h2>Productos</h2>
 			<div class="listaProductos">
-			<!-- Example area of products -->
-				{% for producto in productos %}
-				<div class="productoContainer">
-					<img src="{{ MEDIA_URL }}/{{ imagenes|getimagen:producto.id}}"/>
-					<div class="productoTitulo">{{ producto.titulo }}</div>
-					<div class="productoDescripcion">
-						{{ producto.descripcion_corta }}
-					</div>
-				</div>
-				{% endfor %}
+			{% include page_template %}
+				<script src="http://code.jquery.com/jquery-latest.js"></script>
+				<script src="{{ STATIC_URL }}endless_pagination/js/endless-pagination.js"></script>
+				<script>
+					$.endlessPaginate({
+						paginateOnScroll: true,
+						paginateOnScrollMargin: 200
+					});
+				</script>
 			</div>
 		</section>
 		<section class="otrasCategorias">
