@@ -8,6 +8,7 @@
 }
 .serviciosProductos{
 	border-top: 5px solid #CCCCCC;
+	background: url(../../img/white_wall_hash.png);
 	padding: 50px 0;
 }
 /* sección headerServicios*/
