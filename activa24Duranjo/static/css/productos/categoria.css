@@ -15,6 +15,14 @@
 .productos{
 	margin-top: 50px;
 }
+.imgcategoria{
+	height: 100px;
+}
+
+.tituloCategoria{
+	text-transform: uppercase;
+	font-size: 16px;
+}
 .productoContainer{
 	width: 220px;
 	display: inline-block;
