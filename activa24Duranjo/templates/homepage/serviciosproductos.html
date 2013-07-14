@@ -27,6 +27,10 @@ Categorías de servicios y productos - Activa24 C.A.
 {% block contenido %}
 <section class="serviciosProductos">
 	<div class="wrapper">
+		<form action="." method="POST">	{% csrf_token %}
+			<input type="label">
+			<input type="submit" value="Buscar">
+		</form>
 		<section class="headerServicios">
 			<div class="tituloMujer">
 				<div class="mujerImg"></div>
@@ -51,15 +55,7 @@ Categorías de servicios y productos - Activa24 C.A.
 						paginateOnScrollMargin: 200
 					});
 				</script>
-		{% for categoria in categorias %}
-			<a href="{{ categoria.get_absolute_url }}"><div class="categoriaContainer">
-				<img src="{{ MEDIA_URL }}/{{ categoria.imagen }}" alt="{{ categoria.titulo}}"/>
-				<div class="categoriaTitulo">{{ categoria.titulo }}</div>
-				<div class="categoriaDescripcion">
-				{{ categoria.breve_descripcion }}
-				</div>
-			</div></a>
-		{% endfor %}
+
 		</section>
 	</div>
 </section>
