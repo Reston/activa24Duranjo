@@ -5,7 +5,7 @@ from django.core.urlresolvers import reverse
 
 
 class Categoria(models.Model):
-	titulo = models.CharField(max_length=200)
+	titulo = models.CharField(max_length=200, unique=True)
 	breve_descripcion = models.CharField(max_length=140, help_text='Hasta 140 caracteres')
 	imagen = models.ImageField(upload_to='imgcategorias')
 
