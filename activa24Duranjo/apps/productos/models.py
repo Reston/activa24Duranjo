@@ -35,6 +35,7 @@ class Producto(models.Model):
 	precio_dolares = models.DecimalField(max_digits=30, decimal_places=2)
 	creado_en = models.DateTimeField(auto_now_add=True, editable=False)
 	modificado_en = models.DateTimeField(auto_now=True)
+	disponible = models.BooleanField(default=True, help_text='Disponibilidad del producto')
 
 	def __unicode__(self):
 		return self.titulo
