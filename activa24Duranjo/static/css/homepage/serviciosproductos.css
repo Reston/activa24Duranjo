@@ -76,3 +76,24 @@
 	padding: 10px 15px;
 	box-shadow: 0 0 8px #777;
 }
+.busquedabox{
+	text-align: right;
+	margin-right: 28px;
+	margin-bottom: 29px;
+}
+.textbuscar{
+	background: #E6E7E7;
+	border: 1px solid #CCCCCC;
+	text-indent: 5px;
+	height: 26px;
+	width: 22%;
+}
+.botonbuscar{
+	background: gray;
+	padding: 5px 20px;
+	border: none;
+	color: whitesmoke;
+}
+.mensajebusqueda{
+	text-align: center;
+}

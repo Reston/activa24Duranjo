@@ -39,13 +39,15 @@ Categorías de servicios y productos - Activa24 C.A.
 		</section>
 		<section class="contenidoServicios">
 		<h2>Categorías</h2>
-		<form action="." method="POST">	{% csrf_token %}
-			<input type="text" name="busqueda">
-			<input type="submit" value="Buscar">
+		<form class="busquedabox" action="." method="POST">	{% csrf_token %}
+			<input class="textbuscar" type="text" name="busqueda">
+			<input class="botonbuscar"type="submit" value="Buscar">
 		</form>
 		<!-- Area of products -->
 		{% if mensaje %}
-		{{mensaje}} 
+		<div class="mensajebusqueda">{{mensaje}},
+			<a href="{% url 'homepageserviciosyproductos' %}"> Ver todas las categorias</a>
+		</div> 
 		{% else %}
 
 		<div class="listaProductos">
