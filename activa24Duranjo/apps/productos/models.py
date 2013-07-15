@@ -1,5 +1,6 @@
 # coding: utf-8
 from django.db import models
+from django.contrib import admin
 from tinymce.models import HTMLField
 from django.core.urlresolvers import reverse
 
@@ -17,12 +18,18 @@ class Categoria(models.Model):
 		return reverse('categoria', kwargs={'titulo': titulo})
 
 
+class CategoriaAdmin(admin.ModelAdmin):
+	list_display = ('titulo', 'breve_descripcion',)
+	list_display_links = ('titulo',)
+	search_fields = ['titulo', 'breve_descripcion']
+
+
 class Producto(models.Model):
 	titulo = models.CharField(max_length=200)
 	descripcion_corta = models.CharField(max_length=140, help_text='Hasta 140 caracteres')
 	descripcion = HTMLField()
 	categoria = models.ForeignKey(Categoria)
-	precio_dolares = models.DecimalField(max_digits=30, decimal_places=3)
+	precio_dolares = models.DecimalField(max_digits=30, decimal_places=2)
 
 	def __unicode__(self):
 		return self.titulo

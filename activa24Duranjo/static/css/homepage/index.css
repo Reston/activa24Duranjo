@@ -9,6 +9,7 @@ header{
 }
 .contactoInfo p{
 	text-shadow: 0 0 4px black;
+	color: white;
 }
 /* Configuración slider */
 .flexslider{
