@@ -1,1 +1,39 @@
 @charset 'utf-8';
+.contactoInfo p {
+	color: black;
+}
+.producto{
+	background: url(../../img/cream_dust_@2X.png);
+	padding: 60px 0 0 0;
+	border-top: 5px solid #CCCCCC;
+}
+.tituloh2{
+	text-align: center;
+	color: #3651A0;
+	text-transform: uppercase;
+	font-size: 1.3em;
+}
+.cuadro{
+	background: lightblue;
+	padding: 10px;
+	text-align: justify;
+	margin-bottom: 50px;
+}
+.sliderContainer{
+	background: url(../../img/sliderabout2.jpg);
+	width: 59%;
+	height: 450px;
+	display: inline-block;
+}
+.miniDescripcion{
+	display: inline-block;
+	vertical-align: top;
+	width: 39%;
+	padding: 5px;
+}
+.compartirRedes{ /* Por ahora */
+	margin-top: 60px;
+	width: 100%;
+	height: 75px;
+	background: rgb(169, 173, 192);
+}

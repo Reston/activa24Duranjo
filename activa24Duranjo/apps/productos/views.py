@@ -5,8 +5,12 @@ from django.template import RequestContext
 from activa24Duranjo.apps.productos.models import Categoria, Producto, ImgProductos
 
 
-def producto(request):
-	return render_to_response('productos/producto.html', context_instance=RequestContext(request))
+def producto(request, titulo):
+	titulo = titulo.replace('_', ' ')
+	producto = Producto.objects.get(titulo=titulo)
+	imagenes = ImgProductos.objects.filter(producto=producto)
+	ctx = {'producto': producto, 'imagenes': imagenes}
+	return render_to_response('productos/producto.html', ctx, context_instance=RequestContext(request))
 
 
 def categoria(request, template='productos/categoria.html', page_template='productos/categoria_productos.html', titulo=None):

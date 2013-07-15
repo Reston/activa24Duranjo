@@ -7,7 +7,7 @@ diseño de páginas web, software y diseño gráfico. Además de ofrecer diferen
 <meta name="msvalidate.01" content="5C0D61EB459CD0F5B9245FEA8F798DAA" />
 {% endblock%}
 {% block title %}
-Producto #name# - Activa24 C.A.
+Producto {{ producto.titulo }} - Activa24 C.A.
 {% endblock%}
 {% block css%}
 <link rel="stylesheet" href="{% static 'css/productos/producto.css' %}">
@@ -26,38 +26,35 @@ Producto #name# - Activa24 C.A.
 {% block contenido %}
 <section class="producto">
 	<div class="wrapper">
-		<div class="tituloh2"><h3>Nombre del producto</h3></div>
 		<section class="cuadro">
-			<div class="sliderContainer"></div>
 			<div class="miniDescripcion">
-				<h3>Precio: 9999.99 Bs.</h3>
+				<div class="tituloh2"><h3>{{ producto.titulo }}</h3></div>
+				<h3>Precio: {{ producto.precio_dolares }} Bs.</h3><!-- Cambiar esto con un templatetag -->
+				<h4>Categoria: {{ producto.categoria }}</h4>
 				<div class="mini">
-					lit montes sed turpis scelerisque diam! In adipiscing integer, a tristique elementum, velit amet odio ultrices quis ridiculus, pellentesque et adipiscing, nunc, rhoncus? Lundium scelerisque magna, nunc pulvinar ac ut, mid platea ac cum, in nunc? Nunc urna, amet cum tincidunt in? Aliquet mus eu, dolor, tortor porta. Pulvinar pid! Urna integer pid ac a dis, et turpis, tortor arcu magna in. Porta arcu enim sed.
+					{{ producto.descripcion_corta }}
+				</div>
+				<div class="compartirRedes">
+					<div class="addthis_toolbox addthis_default_style acomodar">
+						<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+						<a class="addthis_button_tweet"></a>
+						<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+						<a class="addthis_button_linkedin_counter"></a>
+						<a class="addthis_counter addthis_pill_style"></a>
+					</div>				
 				</div>
 			</div>
+			<div class="sliderContainer"></div>
 		</section>
 		<section class="productos">
 			<h2>Descripción</h2>
-			<p>
-				Phasellus lorem dignissim adipiscing adipiscing tincidunt ultrices? Placerat, egestas elementum platea habitasse tincidunt, sed tincidunt rhoncus dapibus est placerat, turpis. Etiam non adipiscing? Lorem mattis amet, urna cum elementum diam cursus integer nunc mattis sed scelerisque, cum pid, turpis ut velit, amet nunc lundium dictumst sed turpis et? Montes massa turpis! Placerat pulvinar risus, velit montes sed turpis scelerisque diam! In adipiscing integer, a tristique elementum, velit amet odio ultrices quis ridiculus, pellentesque et adipiscing, nunc, rhoncus? Lundium scelerisque magna, nunc pulvinar ac ut, mid platea ac cum, in nunc? Nunc urna, amet cum tincidunt in? Aliquet mus eu, dolor, tortor porta. Pulvinar pid! Urna integer pid ac a dis, et turpis, tortor arcu magna in. Porta arcu enim sed.
-
-				<h3>Heading 2</h3>
-
-				Phasellus lorem dignissim adipiscing adipiscing tincidunt ultrices? Placerat, egestas elementum platea habitasse tincidunt, sed tincidunt rhoncus dapibus est placerat, turpis. Etiam non adipiscing? Lorem mattis amet, urna cum elementum diam cursus 
-
-				<ul>
-					<li>item1</li>
-					<li>item2</li>
-					<li>item3</li>
-				</ul>
-
-				Fin!
-			</p>
+			{% autoescape off %}
+				{{ producto.descripcion }}
+			{% endautoescape %}
 		</section>
-		<div class="fb-comments" data-href="URL URL URL URL" data-width="470" data-num-posts="10"></div>
+		<div class="fb-comments" data-href="URL URL URL URL" data-width="960" data-num-posts="10"></div>
 	</div>
 </section>
-
 <!-- FACEBOOK SCRIPT -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -67,4 +64,6 @@ Producto #name# - Activa24 C.A.
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+<!-- ADDTHIS script -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script>
 {% endblock %}

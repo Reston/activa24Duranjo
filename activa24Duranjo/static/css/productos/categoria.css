@@ -15,6 +15,9 @@
 .productos{
 	margin-top: 50px;
 }
+.listaProductos a{
+	text-decoration: none;
+}
 .imgcategoria{
 	height: 100px;
 }

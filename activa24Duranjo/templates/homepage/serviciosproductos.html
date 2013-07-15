@@ -27,7 +27,7 @@ Categorías de servicios y productos - Activa24 C.A.
 {% block contenido %}
 <section class="serviciosProductos">
 	<div class="wrapper">
-		<form action="." method="POST">	{% csrf_token %}
+		<form action="." method="POST">{% csrf_token %}
 			<input type="label">
 			<input type="submit" value="Buscar">
 		</form>
@@ -44,7 +44,6 @@ Categorías de servicios y productos - Activa24 C.A.
 		<section class="contenidoServicios">
 		<h2>Categorías</h2>
 		<!-- Area of products -->
-
 		<div class="listaProductos">
 			{% include page_template %}
 				<script src="http://code.jquery.com/jquery-latest.js"></script>

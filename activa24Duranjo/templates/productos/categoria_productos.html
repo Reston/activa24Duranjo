@@ -1,8 +1,8 @@
 {% load custom_filters %}
 {% load endless %}
 {% paginate productos %}
-	<!-- Example area of products -->
-	{% for producto in productos %}
+{% for producto in productos %}
+	<a href="{{ producto.get_absolute_url }}">
 		<div class="productoContainer">
 			<img src="{{ MEDIA_URL }}/{{ imagenes|getimagen:producto.id}}"/>
 			<div class="productoTitulo">{{ producto.titulo }}</div>
@@ -10,5 +10,6 @@
 				{{ producto.descripcion_corta }}
 			</div>
 		</div>
-	{% endfor %}
+	</a>
+{% endfor %}
 {% show_more %}
