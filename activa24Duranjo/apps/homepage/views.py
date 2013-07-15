@@ -10,7 +10,9 @@ from activa24Duranjo.apps.slider.models import SliderItem
 
 def index(request):
 	slideritem = SliderItem.objects.all()
-	ctx = {'slideritem': slideritem}
+	productos = Producto.objects.all().order_by('creado_en')[:3]
+	imagenes = ImgProductos.objects.filter(producto__in=list(productos))
+	ctx = {'slideritem': slideritem, 'productos': productos, 'imagenes': imagenes}
 	return render_to_response('homepage/index.html', ctx, context_instance=RequestContext(request))
 
 
@@ -28,10 +30,10 @@ def serviciosyproductos(request, template='homepage/serviciosproductos.html', pa
 	if request.is_ajax():
 		template = page_template
 	if (palabra_busqueda):
-		categorias =Categoria.objects.filter(titulo__icontains=palabra_busqueda) 
+		categorias = Categoria.objects.filter(titulo__icontains=palabra_busqueda)
 		if not (categorias):
-		  mensaje= "No se han encontrado resuldos para "+palabra_busqueda
-	ctx = {'categorias': categorias, 'page_template': page_template, 'mensaje':mensaje,}
+			mensaje = "No se han encontrado resuldos para "+palabra_busqueda
+	ctx = {'categorias': categorias, 'page_template': page_template, 'mensaje': mensaje}
 	return render_to_response(template, ctx, context_instance=RequestContext(request))
 
 

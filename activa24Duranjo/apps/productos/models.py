@@ -9,6 +9,8 @@ class Categoria(models.Model):
 	titulo = models.CharField(max_length=200, unique=True)
 	breve_descripcion = models.CharField(max_length=140, help_text='Hasta 140 caracteres')
 	imagen = models.ImageField(upload_to='imgcategorias')
+	creado_en = models.DateTimeField(auto_now_add=True, editable=False)
+	modificado_en = models.DateTimeField(auto_now=True)
 
 	def __unicode__(self):
 		return self.titulo
@@ -19,17 +21,20 @@ class Categoria(models.Model):
 
 
 class CategoriaAdmin(admin.ModelAdmin):
-	list_display = ('titulo', 'breve_descripcion',)
+	list_display = ('titulo', 'breve_descripcion', 'creado_en', 'modificado_en')
 	list_display_links = ('titulo',)
 	search_fields = ['titulo', 'breve_descripcion']
 
 
 class Producto(models.Model):
 	titulo = models.CharField(max_length=200)
+	codigo = models.CharField(max_length=20)
 	descripcion_corta = models.CharField(max_length=140, help_text='Hasta 140 caracteres')
 	descripcion = HTMLField()
 	categoria = models.ForeignKey(Categoria)
 	precio_dolares = models.DecimalField(max_digits=30, decimal_places=2)
+	creado_en = models.DateTimeField(auto_now_add=True, editable=False)
+	modificado_en = models.DateTimeField(auto_now=True)
 
 	def __unicode__(self):
 		return self.titulo
