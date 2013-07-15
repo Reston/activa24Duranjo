@@ -75,11 +75,13 @@ Lista de producto de la categoría {{ categoria.titulo }} - Activa24 C.A.
 			<div class="sliderPosition">
 				<div class="flexslider">
 		  			<ul class="slides">
-		  					{% for categoria_item in lista_categorias %}
-		  						<li>
+		  					{% for categoria_item in lista_categorias %}		  					
+								<li>
+									<a href="{{categoria.get_absolute_url}}">
 		  							<div class="tituloCategoria">{{categoria_item.titulo}}</div>
 		  							<img class="imgcategoria" src="{{ MEDIA_URL }}/{{categoria_item.imagen}}" alt="{{categoria_item.titulo}}" >
-		  						</li>
+		  							</a>
+		  						</li>		  				
 		  					{% endfor %}
 		  			 </ul>
 				</div>		

@@ -17,7 +17,7 @@
 	width: 29%;
 }
 .mujerImg{
-	background: url('../../img/logodummy.png');
+	background: url(../../img/logodummy.png);
 	width: 270px;
 	height: 185px;
 	border: 1px solid; /* POR PRUEBAAAAAA!!!! */
@@ -51,7 +51,7 @@
 }
 .categoriaContainer img{
 	text-align: center;
-	width: 200px;
+	width: 100%;
 }
 .categoriaDescripcion{
 	display: none;
