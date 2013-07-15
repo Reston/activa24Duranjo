@@ -37,3 +37,7 @@
 	height: 75px;
 	background: rgb(169, 173, 192);
 }
+.precioTachado{
+	text-decoration:line-through;
+	color: red;
+}
