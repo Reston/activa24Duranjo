@@ -60,9 +60,6 @@ Página principal - Activa24 C.A.
 						<a href="{{ p.get_absolute_url }}">
 							<div class="productContainer">
 								<img src="{{ MEDIA_URL }}/{{ imagenes|getimagen:p.id}}" alt="{{p.titulo}} imagen"/>
-								<div class="productText">
-									{{ p.descripcion_corta}}
-								</div>
 								<div class="productBoton">{{p.titulo}}</div>
 							</div>
 						</a>

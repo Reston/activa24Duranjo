@@ -8,7 +8,7 @@ diseño de páginas web, software y diseño gráfico. Además de ofrecer diferen
 <meta name="msvalidate.01" content="5C0D61EB459CD0F5B9245FEA8F798DAA" />
 {% endblock%}
 {% block title %}
-Lista de producto de la categoría #colocar categoria name# - Activa24 C.A.
+Lista de producto de la categoría {{ categoria.titulo }} - Activa24 C.A.
 {% endblock%}
 {% block css%}
 <link rel="stylesheet" href="{% static 'css/productos/categoria.css' %}">
@@ -87,13 +87,15 @@ Lista de producto de la categoría #colocar categoria name# - Activa24 C.A.
 		</section>
 	<!-- SLIDER -->
 	<script>
-		$(window).load(function() {
-  			$('.flexslider').flexslider({
-    		animation: "slide",
-    		animationLoop: false,
-    		itemWidth: 150,
-    		itemMargin: 5
-  		});
+	$(window).load(function() {
+	  $('.flexslider').flexslider({
+		animation: "slide",
+		animationLoop: false,
+		itemWidth: 220,
+		itemMargin: 5,
+		minItems: 2,
+		maxItems: 4
+		});
 	});
 	</script>
 {% endblock %}
