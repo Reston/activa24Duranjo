@@ -15,8 +15,8 @@ Lista de producto de la categoría #colocar categoria name# - Activa24 C.A.
 <link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
 {% endblock %}
 {% block js %}
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script type="text/javascript" src="{% static 'js/adquiridos/back-top.js' %}"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="{% static 'js/adquiridos/back-top.js' %}"></script>
 <script src="{% static 'js/adquiridos/jquery.flexslider-min.js' %}"></script>
 {% endblock %}
 {% block navi %}
@@ -44,7 +44,6 @@ Lista de producto de la categoría #colocar categoria name# - Activa24 C.A.
 			<h2>Productos</h2>
 			<div class="listaProductos">
 			{% include page_template %}
-				<script src="http://code.jquery.com/jquery-latest.js"></script>
 				<script src="{{ STATIC_URL }}endless_pagination/js/endless-pagination.js"></script>
 				<script>
 					$.endlessPaginate({
