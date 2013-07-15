@@ -30,6 +30,7 @@ Lista de producto de la categoría #colocar categoria name# - Activa24 C.A.
 {% block contenido %}
 <section class="categoria">
 	<div class="wrapper">
+
 		<section class="oferta">
 			<div class="tituloh2"><h2>{{ categoria.titulo }}</h2></div>
 			<!-- Se debe hacer un modulo para cargar estas dos imagenes o hacerlo manual estableciendo dos nombres y cambiar eso y ya-->
@@ -40,8 +41,21 @@ Lista de producto de la categoría #colocar categoria name# - Activa24 C.A.
 				<img src="{% static 'img/logodummy.png' %}" alt="logo dummy" style="width: 460px;">
 			</div>
 		</section>
-		<section class="productos">
-			<h2>Productos</h2>
+
+		<section id="productoslista" class="productos">
+			<h2 >Productos</h2>
+		<div class="busquedabox">	
+			<form action="#productoslista" method="POST">	{% csrf_token %}
+				<input class="textbuscar" type="text" name="busqueda">
+				<input class="botonbuscar"type="submit" value="Buscar">
+			</form>
+		</div>		
+			{% if mensaje %}
+				<div class="mensajebusqueda" >{{mensaje}},
+				<a href="{{categoria.get_abosulute_url}}"> Ver todos los productos</a>
+				</div>
+			{% else %}		
+
 			<div class="listaProductos">
 			{% include page_template %}
 				<script src="{{ STATIC_URL }}endless_pagination/js/endless-pagination.js"></script>
@@ -52,7 +66,9 @@ Lista de producto de la categoría #colocar categoria name# - Activa24 C.A.
 					});
 				</script>
 			<!-- Example area of products -->
+					
 			</div>
+			{% endif  %}
 		</section>
 		<section class="otrasCategorias">
 			<h2>Otras categorías</h2>

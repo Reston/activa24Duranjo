@@ -25,12 +25,34 @@
 	height: 100px;
 }
 
+.busquedabox{
+	text-align: right;
+	margin-right: 28px;
+	margin-bottom: 29px;
+}
+.textbuscar{
+	background: #E6E7E7;
+	border: 1px solid #CCCCCC;
+	text-indent: 5px;
+	height: 26px;
+	width: 22%;
+}
+.botonbuscar{
+	background: gray;
+	padding: 5px 20px;
+	border: none;
+	color: whitesmoke;
+}
+.mensajebusqueda{
+	text-align: center;
+}
 .tituloCategoria{
 	text-transform: uppercase;
 	font-size: 16px;
 }
 .productoContainer{
 	width: 220px;
+	float: left;
 	display: inline-block;
 	margin-left:20px; 
 	margin-bottom: 20px;
@@ -39,9 +61,18 @@
 .productoContainer img{
 	text-align: center;
 	width: 220px;
+	height: 200px;
 }
 .productoDescripcion{
-	display: none;
+	color: rgb(114, 110, 110);
+	border: solid rgb(219, 219, 219) 1px;
+	margin-bottom: 15px;
+	height: 147px;
+	padding-top: 6px;
+}
+.listaProductos{
+	float:left;
+	width: 100%;
 }
 .productoTitulo{
 	background: rgba(57, 83, 160,0.8);
