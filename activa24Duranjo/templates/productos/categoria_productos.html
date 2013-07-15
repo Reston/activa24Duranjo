@@ -6,10 +6,12 @@
 		<div class="productoContainer">
 			<img src="{{ MEDIA_URL }}/{{ imagenes|getimagen:producto.id}}"/>
 			<div class="productoTitulo">{{ producto.titulo }}</div>
+
 			<div class="productoDescripcion">
 				{{ producto.descripcion_corta }}
 			</div>
-		</div>
 	</a>
+		</div>
+	
 {% endfor %}
 {% show_more %}
