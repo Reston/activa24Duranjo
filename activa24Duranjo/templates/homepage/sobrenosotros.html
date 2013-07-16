@@ -11,10 +11,12 @@ Acerca de la empresa - Activa24 C.A.
 {% endblock%}
 {% block css%}
 <link rel="stylesheet" href="{% static 'css/homepage/sobrenosotros.css' %}">
+<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
 {% endblock %}
 {% block js %}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script src="{% static 'js/adquiridos/back-top.js' %}"></script>
+<script src="{% static 'js/adquiridos/jquery.flexslider-min.js' %}"></script>
 {% endblock %}
 {% block navi %}
 		<ul>
@@ -28,10 +30,13 @@ Acerca de la empresa - Activa24 C.A.
 <section class="sobreNosotros">
 	<div class="wrapper">
 		<section class="quienesSomos">
-			<div class="slideUno">
-				<img src="{% static 'img/sliderabout1.jpg' %}" alt="Imagen sobre quien es activa24">
-			</div>
-			<article class="infoQuienesSomos">
+		<div class="sliderPosition">	
+		<div class="flexslider">
+		  <ul class="slides slideUno">
+		  			<li>	<img src="{% static 'img/sliderabout1.jpg' %}" alt="Imagen sobre quien es activa24"></li>
+		  			<li><img src="{% static 'img/sliderabout2.jpg' %}" alt="Imagen sobre quien es activa24"></li>
+		</div>		</div>
+				<article class="infoQuienesSomos">
 				<h2>Quienes somos</h2>
 				<p>Activa24 C.A. fue creada el 18 de Julio del 2012 en Ciudad Ojeda por iniciativa de un experimentado y visionario empresario de la zona respondiendo a la detección de necesidades y requerimientos de su propio grupo de empresas y de la localidad, proyectando su objetivo a satisfacer las demandas y requerimientos de un mercado general a nivel nacional e internacional</p>
 			</article>
@@ -57,4 +62,11 @@ Acerca de la empresa - Activa24 C.A.
 		</section>
 	</div>
 </section>
+	<!-- SLIDER INIT -->
+	<script>
+		$(window).load(function() {
+		  $('.flexslider').flexslider({
+		  });
+		});
+	</script>
 {% endblock %}
