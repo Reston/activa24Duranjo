@@ -57,18 +57,27 @@ header{
 	padding: 50px 0;
 }
 .textoSobreNosotros{
-	width: 80%;
+	width: 60%;
+	padding: 10px;
 	text-align: justify;
 	display: inline-block;
 	vertical-align: top;
 }
 .monitorCamaras{
-	width: 19%;
+	position: relative;
+	width: 30%;
 	display: inline-block;
 }
+.imagenstatic{
+	position: absolute;
+	top: 42px;
+	left: 10px;
+	background: url(../../img/staticimg.gif) no-repeat;
+	width: 281px;
+	height: 176px;	
+}
 .monitorCamaras img{
-	width: 150px;
-	margin-right: 30px;
+	width: 300px;
 }
 /* Ultimos productos section */
 .ultimosProductos{
