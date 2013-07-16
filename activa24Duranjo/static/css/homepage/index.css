@@ -13,6 +13,7 @@ header{
 }
 /* Configuración slider */
 .flexslider{
+	background: url(../img/loader.gif) no-repeat center center;
 	overflow: hidden;
 	height: 560px;
 	border: none !important;
