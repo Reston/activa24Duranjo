@@ -22,7 +22,7 @@
 	text-decoration: none;
 }
 .imgcategoria{
-	height: 100px;
+	height: 120px;
 }
 
 .busquedabox{
@@ -43,12 +43,16 @@
 	border: none;
 	color: whitesmoke;
 }
+.slides li a{
+	text-decoration: none;
+}
 .mensajebusqueda{
 	text-align: center;
 }
 .tituloCategoria{
-	text-transform: uppercase;
 	font-size: 16px;
+	color: gray;
+	text-align: center;
 }
 .productoContainer{
 	width: 220px;
