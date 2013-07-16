@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load url from future %}
 {% load staticfiles %}
+{% load custom_filters %}
 {% block head %} 
 <meta name="description" content="Página oficial de la empresa Duranjo Web C.A. que desarrolla soluciones informaticas para 
 diseño de páginas web, software y diseño gráfico. Además de ofrecer diferentes planes accesibles a cualquier tipo de cliente. Innovación, estilo y creatividad es nuestro ideal.">
@@ -30,11 +31,15 @@ Producto {{ producto.titulo }} - Activa24 C.A.
 			<div class="miniDescripcion">
 				<div class="tituloh2"><h3>{{ producto.titulo }}</h3></div>
 				{% if producto.disponible %}
-					<h3>Precio: {{ producto.precio_dolares }} Bs.</h3><!-- Cambiar esto con un templatetag -->
+					<h3>Precio: 
+						{% for dol in dolar %}
+							{{dol.dolarEnBolivar|getPrecio:producto.precio_dolares}}
+						{% endfor%}Bs.</h3><!-- Cambiar esto con un templatetag -->
 				{% else %}
 					<h3>Precio: <div class="precioTachado">{{ producto.precio_dolares }} Bs.</div>Producto no disponible</h3>
 				{% endif %}
 				<h4>Categoria: {{ producto.categoria }}</h4>
+				<h4>Código: {{ producto.codigo }}</h4>
 				<div class="mini">
 					{{ producto.descripcion_corta }}
 				</div>

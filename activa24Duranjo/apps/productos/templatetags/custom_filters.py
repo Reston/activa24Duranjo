@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 from django.template import Library
-from activa24Duranjo.apps.productos.models import Producto
+from decimal import *
 register = Library()
 
 
@@ -10,3 +10,9 @@ def getimagen(list, mid):
 		if list[i].producto_id == mid:
 			return list[i].imagen
 	return
+
+
+@register.filter
+def getPrecio(valorActual, ValorDolar):
+	TWOPLACES = Decimal(10) ** -2
+	return (valorActual*ValorDolar).quantize(TWOPLACES)

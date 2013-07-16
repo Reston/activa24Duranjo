@@ -2,20 +2,21 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from activa24Duranjo.apps.productos.models import Categoria, Producto, ImgProductos
+from activa24Duranjo.apps.productos.models import Categoria, Producto, ImgProductos, ValorDolar
 
 
 def producto(request, titulo):
 	titulo = titulo.replace('_', ' ')
 	producto = Producto.objects.get(titulo=titulo)
+	dolar = ValorDolar.objects.all()[:1]
 	imagenes = ImgProductos.objects.filter(producto=producto)
-	ctx = {'producto': producto, 'imagenes': imagenes}
+	ctx = {'producto': producto, 'imagenes': imagenes, 'dolar':dolar}
 	return render_to_response('productos/producto.html', ctx, context_instance=RequestContext(request))
 
 
 def categoria(request, template='productos/categoria.html', page_template='productos/categoria_productos.html', titulo=None):
 	palabra_busqueda = request.POST.get('busqueda', '')
-	mensaje = ''		
+	mensaje = ''
 	titulo = titulo.replace('_', ' ')
 	categoria = Categoria.objects.get(titulo=titulo)
 	lista_categorias = Categoria.objects.all()
@@ -24,8 +25,8 @@ def categoria(request, template='productos/categoria.html', page_template='produ
 	if request.is_ajax():
 		template = page_template
 	if (palabra_busqueda):
-		productos = Producto.objects.filter(titulo__icontains=palabra_busqueda) 
+		productos = Producto.objects.filter(titulo__icontains=palabra_busqueda)
 		if not (productos):
-		  mensaje= "No se han encontrado resuldos para "+palabra_busqueda		
-	ctx = {'categoria': categoria, 'page_template': page_template, 'productos': productos, 'imagenes': imagenes, 'lista_categorias': lista_categorias, 'mensaje':mensaje}
+			mensaje = "No se han encontrado resuldos para "+palabra_busqueda
+	ctx = {'categoria': categoria, 'page_template': page_template, 'productos': productos, 'imagenes': imagenes, 'lista_categorias': lista_categorias, 'mensaje': mensaje}
 	return render_to_response(template, ctx, context_instance=RequestContext(request))

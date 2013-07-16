@@ -3,6 +3,7 @@ from django.db import models
 from django.contrib import admin
 from tinymce.models import HTMLField
 from django.core.urlresolvers import reverse
+from decimal import Decimal
 
 
 class Categoria(models.Model):
@@ -48,3 +49,13 @@ class Producto(models.Model):
 class ImgProductos(models.Model):
 	producto = models.ForeignKey(Producto, related_name='imagenes')
 	imagen = models.ImageField(upload_to='imgproductos')
+
+
+class ValorDolar(models.Model):
+	dolarEnBolivar = models.DecimalField(max_digits=30, decimal_places=2)
+
+	def __unicode__(self):
+		return unicode(self.dolarEnBolivar)
+
+	def get_valor_actual(self, valorEnDolares):
+		return (Decimal(valorEnDolares)*Decimal(self.dolarEnBolivar))
