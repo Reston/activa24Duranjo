@@ -27,7 +27,8 @@ Producto {{ producto.titulo }} - Activa24 C.A.
 {% block contenido %}
 <section class="producto">
 	<div class="wrapper">
-		<section class="cuadro">
+		<a class="back-link" href="{{producto.categoria.get_absolute_url}}">«</a>
+		<section class="cuadro">			
 			<div class="miniDescripcion">
 				<div class="tituloh2"><h3>{{ producto.titulo }}</h3></div>
 				{% if producto.disponible %}
