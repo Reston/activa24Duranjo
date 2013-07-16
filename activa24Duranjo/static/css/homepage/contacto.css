@@ -1,4 +1,7 @@
 @charset 'utf-8';
+#map-canvas{
+	height: 100%;
+}
 .contactoInfo p{
 	color: black;
 }
