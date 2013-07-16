@@ -111,10 +111,11 @@ header{
 	border-left:none;
 }
 .tituloh3{
-	margin-top: 10px;
-	margin-bottom: 50px;
 	color: #3651A0;
-	font-size: 1.5em;	
+	font-size: 0.8em;
+	text-transform: uppercase;
+	text-align: right;
+
 }
 .tituloh3 a{
 	text-decoration: none;

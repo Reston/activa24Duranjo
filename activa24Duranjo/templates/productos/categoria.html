@@ -77,9 +77,9 @@ Lista de producto de la categoría {{ categoria.titulo }} - Activa24 C.A.
 		  			<ul class="slides">
 		  					{% for categoria_item in lista_categorias %}		  					
 								<li>
-									<a href="{{categoria.get_absolute_url}}">
-		  							<div class="tituloCategoria">{{categoria_item.titulo}}</div>
+									<a href="{{categoria_item.get_absolute_url}}">
 		  							<img class="imgcategoria" src="{{ MEDIA_URL }}/{{categoria_item.imagen}}" alt="{{categoria_item.titulo}}" >
+		  							<div class="tituloCategoria">{{categoria_item.titulo}}</div>
 		  							</a>
 		  						</li>		  				
 		  					{% endfor %}
@@ -93,10 +93,10 @@ Lista de producto de la categoría {{ categoria.titulo }} - Activa24 C.A.
 	  $('.flexslider').flexslider({
 		animation: "slide",
 		animationLoop: false,
-		itemWidth: 220,
-		itemMargin: 5,
+		itemWidth: 100,
+		itemMargin: 0,
 		minItems: 2,
-		maxItems: 4
+		maxItems: 6
 		});
 	});
 	</script>
