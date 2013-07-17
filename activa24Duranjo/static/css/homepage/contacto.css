@@ -19,7 +19,7 @@
 	background: url('../../img/activa24logo.png') no-repeat;
 	position: absolute;
 	bottom: 5%;
-	right: 30%;
+	right: 25%;
 	margin: 0;
 	width: 340px;
 	height: 80px;
@@ -82,8 +82,4 @@ input[type="submit"]{
 .map{
 	width: 490px;
 	height: 350px;
-	background: #3953A0;
-}
-.opcionesContacto ul{
-	list-style: none;
 }
