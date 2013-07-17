@@ -28,17 +28,18 @@ Página principal - Activa24 C.A.
 		</ul>				
 {% endblock %}
 {% block contenido %}
-	<div class="sliderPosition">
-		<div class="flexslider">
-		  <ul class="slides">
-		  	{% if slideritem %}
-		  		{% for item in slideritem %}
-		  			<li><img src="{{item.image.url}}" alt="{{item.title}}"></li>
-		  		{% endfor %}
-		  	{% endif %}
-		</div>		
-	</div>
 	<section id="slider" class="sliderText">
+		<div class="sliderPosition">
+			<div class="flexslider">
+				<ul class="slides">
+					{% if slideritem %}
+						{% for item in slideritem %}
+							<li><img src="{{item.image.url}}" alt="{{item.title}}"></li>
+						{% endfor %}
+					{% endif %}
+			 	</ul>
+			</div>		
+		</div>
 	</section>
 	<section class="aboutus">
 		<div class="wrapper">

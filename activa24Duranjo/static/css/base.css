@@ -49,15 +49,15 @@ header .logo img{
 	width: 250px;
 	float: left;
 }
-.barraNavegacion{
+nav{
 	text-align: right;
 }
-.barraNavegacion ul li{
+nav ul li{
 	display: inline-block;
 	font-size: 0.8em;
 	text-transform: uppercase;
 }
-.barraNavegacion a{
+nav a{
 	background: black;
 	background: rgba(77,77,77,0.9);
 	color: white;
@@ -65,11 +65,11 @@ header .logo img{
 	text-decoration: none;
 	border-left: 2px solid white
 }
-.barraNavegacion a:hover{
+nav a:hover{
 	background: blue;
 	background: rgba(56, 163, 213, 0.8);
 }
-.barraNavegacion li:first-child a{
+nav li:first-child a{
 	border-left: none;
 }
 /* END HEADER */
@@ -192,8 +192,54 @@ footer > .wrapper > div{
 	background-color: #777;
 }
 
-@media screen and (max-width: 1000px){
+.logoactiva24blanco{
+	display: none;
+}
 
+@media screen and (max-width: 1000px){
+	.wrapper{
+		width: 100%;
+	}
+	.rifInfo, .contactoInfo{
+		float: none;
+	}
+	.logo{
+		text-align: center;
+	}
+	header .logo img {
+		float: none;
+		width: 350px;
+	}
+	nav{
+		text-align: center;
+	}
+	nav ul{
+		margin: 15px 0 9px 0;
+		padding: 0;
+	}
+	nav a{
+		padding: 10px 10px;
+	}
+	.footer-der{
+		margin-left: 1%;
+	}
+	.footer-der, .footer-med{
+		width: 48%;
+	}
+	.footer-izq{
+		width: 100%;
+		margin-top: 0;
+		text-align: center;
+	}
+	.logoactiva24{
+		display: none;
+	}
+	.logoactiva24blanco{
+		display: block;
+	}
+	.footer-med img {
+		width: 100%;
+	}
 	/* configuración back-to-top responsive */
 	.back-top a{
 		width: 60px;
@@ -209,5 +255,33 @@ footer > .wrapper > div{
 	}
 	.back-top a:hover span {
 		background:none;
+	}
+	/* END CONFIG back-to-top */
+
+}
+@media screen and (max-width: 480px) {
+	.informacionHeader{
+		text-align: center;
+	}
+	header .logo img{
+		width: 300px;
+	}
+	nav ul{
+		margin: 15px 0 0 0;
+	}
+	nav ul li {
+	display: block;
+	}
+	nav a{
+		display: block;
+	}
+	footer{
+		padding: 0
+	}
+	.footer-med {
+		margin-top: 24%;
+	}
+	.footer-izq{
+		padding-top: 15px;
 	}
 }

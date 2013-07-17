@@ -39,9 +39,6 @@ header{
 .sliderPosition{
 	width: 100%;
 	height: 560px;
-	position: absolute;
-	top: 0;
-	left: 0;
 	color: transparent;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -134,4 +131,48 @@ header{
 }
 .empresasLogos a img{
 	width: 128px;
+}
+
+@media screen and (max-width: 1000px){
+	/* header  */
+	header{
+		position: static;
+		height: 100%;
+	}
+	.contactoInfo p {
+		text-shadow: 0 0 0 #000;
+		color: black;
+	}
+	/* Sobre nosotros */
+	.monitorCamaras{
+		width: 100%;
+		text-align: center;
+	}
+	.imagenstatic {
+		display: none;
+	}
+	.textoSobreNosotros {
+		width: 95%;
+	}
+	/* ultimos productos */
+	.ultimosProductos .wrapper .productContainer {
+		border-left: none;
+	}
+	.productContainer img {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	/* ultimos productos */
+	.productContainer {
+		width: 65%;
+	}
+	.productContainer img {
+		width: 100%;
+	}
+	/*footer*/
+	.listaMenuFooter{
+		font-size: 1.1em;
+	}
 }
