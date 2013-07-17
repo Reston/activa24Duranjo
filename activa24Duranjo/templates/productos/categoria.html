@@ -30,8 +30,16 @@ Lista de producto de la categoría {{ categoria.titulo }} - Activa24 C.A.
 {% block contenido %}
 <section class="categoria">
 	<div class="wrapper">
-		<section class="oferta">
+		<section id="productoslista" class="productos">
 			<div class="tituloh2"><h2>{{ categoria.titulo }}</h2></div>
+		<div class="busquedabox">
+			<a class="back-link" href="{% url 'homepageserviciosyproductos' %}">«</a>
+			<form action="#productoslista" method="POST">	{% csrf_token %}
+				<input class="textbuscar" type="text" name="busqueda">
+				<input class="botonbuscar"type="submit" value="Buscar">
+			</form>
+		</div>		
+		<section class="oferta">
 			<!-- Se debe hacer un modulo para cargar estas dos imagenes o hacerlo manual estableciendo dos nombres y cambiar eso y ya-->
 			{% for destacado in destacados %}
 			<div class="ofertas">
@@ -39,15 +47,6 @@ Lista de producto de la categoría {{ categoria.titulo }} - Activa24 C.A.
 			</div>
 			{% endfor %}
 		</section>
-		<a class="back-link" href="{% url 'homepageserviciosyproductos' %}">«</a>
-		<section id="productoslista" class="productos">
-			<h2 >Productos</h2>
-		<div class="busquedabox">
-			<form action="#productoslista" method="POST">	{% csrf_token %}
-				<input class="textbuscar" type="text" name="busqueda">
-				<input class="botonbuscar"type="submit" value="Buscar">
-			</form>
-		</div>		
 			{% if mensaje %}
 				<div class="mensajebusqueda" >{{mensaje}},
 				<a href="{{categoria.get_abosulute_url}}"> Ver todos los productos</a>
