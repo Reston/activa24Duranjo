@@ -114,7 +114,9 @@
 .mensajebusqueda{
 	text-align: center;
 }
-
+.listaProductos a{
+	text-decoration: none;
+}
 @keyframes boxEfecto
 {
 from {

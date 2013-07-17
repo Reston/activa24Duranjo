@@ -2,13 +2,14 @@
 {% load endless %}
 {% paginate categorias %}
 {% for categoria in categorias %}
-	<a href="{{ categoria.get_absolute_url }}">
-		<div class="categoriaContainer">
+<a href="{{ categoria.get_absolute_url }}">
+	<div class="categoriaContainer">
 			<img src="{{ MEDIA_URL }}/{{ categoria.imagen }}" alt="{{categoria.titulo}} imagen">
 			<div class="bluebox">
 				<div class="categoriaTitulo">{{ categoria.titulo }}</div>
 				<div class="categoriaDescripcion">{{ categoria.breve_descripcion }}	</div>
 			</div>
-	</div></a>
+	</div>
+</a>
 {% endfor %}
 {% show_more %}
