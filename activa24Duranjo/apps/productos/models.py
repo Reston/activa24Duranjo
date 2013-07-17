@@ -1,13 +1,13 @@
 # coding: utf-8
 from django.db import models
-from django.contrib import admin
 from tinymce.models import HTMLField
 from django.core.urlresolvers import reverse
 from decimal import Decimal
+from django.core.validators import RegexValidator
 
 
 class Categoria(models.Model):
-	titulo = models.CharField(max_length=200, unique=True)
+	titulo = models.CharField(max_length=20, help_text='Hasta 20 caracteres y solamente alfanuméricos', unique=True)
 	breve_descripcion = models.CharField(max_length=140, help_text='Hasta 140 caracteres')
 	imagen = models.ImageField(upload_to='imgcategorias')
 	creado_en = models.DateTimeField(auto_now_add=True, editable=False)
@@ -21,14 +21,8 @@ class Categoria(models.Model):
 		return reverse('categoria', kwargs={'titulo': titulo})
 
 
-class CategoriaAdmin(admin.ModelAdmin):
-	list_display = ('titulo', 'breve_descripcion', 'creado_en', 'modificado_en')
-	list_display_links = ('titulo',)
-	search_fields = ['titulo', 'breve_descripcion']
-
-
 class Producto(models.Model):
-	titulo = models.CharField(max_length=200)
+	titulo = models.CharField(max_length=25, help_text='Hasta 25 caracteres y solamente alfanuméricos')
 	codigo = models.CharField(max_length=20)
 	descripcion_corta = models.CharField(max_length=140, help_text='Hasta 140 caracteres')
 	descripcion = HTMLField()
