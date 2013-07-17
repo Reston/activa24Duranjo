@@ -30,41 +30,38 @@ Categorías de servicios y productos - Activa24 C.A.
 		<section class="headerServicios">
 			<div class="tituloMujer">
 				<div class="mujerImg"></div>
-				<div class="tituloAzul">Servicios y Productos</div>
+				<div class="tituloAzul">Productos y servicios</div>
 			</div>
 			<div class="textoHeaderServicios">
-				<p>ACTIVA24 ofrece una gran gama de productos y servicios de alta calidad, brindando a sus clientes soluciones integradas en sistemas de seguridad, vigilancia y monitoreo, así como equipos de networking y consultoría tecnológica. Conozca nuestros productos seleccionando alguna categoría.</p>
+				<h2>Productos y servicios</h2>
+				<div class="textoinicio"><p>ACTIVA24 ofrece una gran gama de productos y servicios de alta calidad, brindando a sus clientes soluciones integradas en sistemas de seguridad, vigilancia y monitoreo, así como equipos de networking y consultoría tecnológica. Conozca nuestros productos seleccionando alguna categoría.</p></div>
 			</div>
 		</section>
 		<section class="contenidoServicios">
-			<h2>Categorías</h2>
-			<form class="busquedabox" action="." method="POST">	{% csrf_token %}
-				<input class="textbuscar" type="text" name="busqueda">
-				<input class="botonbuscar"type="submit" value="Buscar">
-			</form>
-			<!-- Area of products -->
-			{% if mensaje %}
-			<div class="mensajebusqueda">{{mensaje}},
-				<a href="{% url 'homepageserviciosyproductos' %}"> Ver todas las categorias</a>
-			</div> 
-			{% else %}
-			<div class="listaProductos">
-				{% include page_template %}
-					<script src="http://code.jquery.com/jquery-latest.js"></script>
-					<script src="{{ STATIC_URL }}endless_pagination/js/endless-pagination.js"></script>
-					<script>
-						$.endlessPaginate({
-							paginateOnScroll: true,
-							paginateOnScrollMargin: 200
-						});
-					</script>
-			</div>
-		</section>		
-		{% endif %}
+		<form class="busquedabox" action="." method="POST">	{% csrf_token %}
+			<input class="textbuscar" type="text" name="busqueda">
+			<input class="botonbuscar"type="submit" value="Buscar">
+		</form>
+		<!-- Area of products -->
+		{% if mensaje %}
+		<div class="mensajebusqueda">{{mensaje}},
+			<a href="{% url 'homepageserviciosyproductos' %}"> Ver todas las categorias</a>
+		</div> 
+		{% else %}
+
+		<div class="listaProductos">
+			{% include page_template %}
+				<script src="http://code.jquery.com/jquery-latest.js"></script>
+				<script src="{{ STATIC_URL }}endless_pagination/js/endless-pagination.js"></script>
+				<script>
+					$.endlessPaginate({
+						paginateOnScroll: true,
+						paginateOnScrollMargin: 200
+					});
+				</script>
+
+		</section>
 	</div>
+	{% endif %}
 </section>
-<!-- BACK TOP BOX -->
-<div id="back-top" class="back-top">
-	<a href="#home"><span>↑</span>Regresar arriba</a>
-</div>
 {% endblock %}

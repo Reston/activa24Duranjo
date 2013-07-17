@@ -9,7 +9,7 @@
 .serviciosProductos{
 	border-top: 5px solid #CCCCCC;
 	background: url(../../img/white_wall_hash.png);
-	padding: 50px 0;
+	padding: 20px 0;
 }
 /* sección headerServicios*/
 .tituloMujer{
@@ -36,7 +36,13 @@
 	width: 70%;
 	text-align: justify;
 	vertical-align: top;
+	margin-top: 64px;
 }
+.textoinicio {
+	margin-top: 64px;
+	text-align: justify;
+}
+
 .textoHeaderServicios h3{
 	text-align: right;
 }
@@ -95,7 +101,8 @@
 }
 .busquedabox{
 	text-align: right;
-	margin-right: 28px;
+	margin-right: 4px;
+	margin-top: 24px;
 	margin-bottom: 29px;
 }
 .textbuscar{
