@@ -33,14 +33,13 @@ Lista de producto de la categoría {{ categoria.titulo }} - Activa24 C.A.
 		<section class="oferta">
 			<div class="tituloh2"><h2>{{ categoria.titulo }}</h2></div>
 			<!-- Se debe hacer un modulo para cargar estas dos imagenes o hacerlo manual estableciendo dos nombres y cambiar eso y ya-->
-			<div class="ofertaizq">
-				<img src="{% static 'img/logodummy.png' %}" alt="logo dummy" style="width: 460px;">
+			{% for destacado in destacados %}
+			<div class="ofertas">
+				<a href="{{ destacado.get_absolute_url }}"><img src="{{ MEDIA_URL }}/{{ imagenes|getimagen:destacado.id}}" alt="{{destacado.titulo}}"></a>
 			</div>
-			<div class="ofertader">
-				<img src="{% static 'img/logodummy.png' %}" alt="logo dummy" style="width: 460px;">
-			</div>
+			{% endfor %}
 		</section>
-
+		<a class="back-link" href="{% url 'homepageserviciosyproductos' %}">«</a>
 		<section id="productoslista" class="productos">
 			<h2 >Productos</h2>
 		<div class="busquedabox">
@@ -67,7 +66,6 @@ Lista de producto de la categoría {{ categoria.titulo }} - Activa24 C.A.
 					
 			</div>
 			{% endif %}
-		<a class="back-link" href="{% url 'homepageserviciosyproductos' %}">«</a>
 		</section>
 		<section class="otrasCategorias">
 			<h2>Otras categorías</h2>

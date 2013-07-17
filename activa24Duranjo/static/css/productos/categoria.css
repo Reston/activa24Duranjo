@@ -19,8 +19,13 @@
 	margin-top: 50px;
 	text-align: center;
 }
-.ofertaizq, .ofertader{
+.ofertas{
 	display: inline-block;
+}
+.ofertas img{
+	width: 350px;
+	height: 300px;
+	margin-right: 10px;
 }
 /* Lista productos*/
 .productos{

@@ -21,6 +21,7 @@ def categoria(request, template='productos/categoria.html', page_template='produ
 	categoria = Categoria.objects.get(titulo=titulo)
 	lista_categorias = Categoria.objects.all()
 	productos = Producto.objects.filter(categoria=categoria.pk)
+	destacados = productos.filter(destacado=True)[:2]
 	imagenes = ImgProductos.objects.filter(producto__in=productos)
 	if request.is_ajax():
 		template = page_template
@@ -28,5 +29,13 @@ def categoria(request, template='productos/categoria.html', page_template='produ
 		productos = Producto.objects.filter(titulo__icontains=palabra_busqueda)
 		if not (productos):
 			mensaje = "No se han encontrado resuldos para "+palabra_busqueda
-	ctx = {'categoria': categoria, 'page_template': page_template, 'productos': productos, 'imagenes': imagenes, 'lista_categorias': lista_categorias, 'mensaje': mensaje}
+	ctx = {
+		'categoria': categoria,
+		'page_template': page_template,
+		'productos': productos,
+		'destacados': destacados,
+		'imagenes': imagenes,
+		'lista_categorias': lista_categorias,
+		'mensaje': mensaje
+	}
 	return render_to_response(template, ctx, context_instance=RequestContext(request))

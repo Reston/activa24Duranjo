@@ -37,6 +37,7 @@ class Producto(models.Model):
 	creado_en = models.DateTimeField(auto_now_add=True, editable=False)
 	modificado_en = models.DateTimeField(auto_now=True)
 	disponible = models.BooleanField(default=True, help_text='Disponibilidad del producto')
+	destacado = models.BooleanField(default=False, help_text='Promocionar producto en sección de destacados')
 
 	def __unicode__(self):
 		return self.titulo

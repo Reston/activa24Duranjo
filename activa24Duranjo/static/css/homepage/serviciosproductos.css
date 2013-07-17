@@ -35,6 +35,7 @@
 	display: inline-block;
 	width: 70%;
 	text-align: justify;
+	vertical-align: top;
 }
 .textoHeaderServicios h3{
 	text-align: right;
