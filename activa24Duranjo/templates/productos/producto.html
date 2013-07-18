@@ -64,10 +64,11 @@ Producto {{ producto.titulo }} - Activa24 C.A.
 								{{dol.dolarEnBolivar|getPrecio:producto.precio_dolares}}
 							{% endfor%}Bs.</div>
 						</div><!-- Cambiar esto con un templatetag -->
+					<div class="categoria">Categoria: <a href="#">{{ producto.categoria }}</a></div>
 					{% else %}
 						<h3>Precio: <div class="precioTachado">{{ producto.precio_dolares }} Bs.</div>Producto no disponible</h3>
 					{% endif %}
-					<div class="categoria">Categoria: <a href="#">{{ producto.categoria }}</a></div>
+					<div class="categoria left">Categoria: <a href="#">{{ producto.categoria }}</a></div>
 					<div class="mini">
 					{{ producto.descripcion_corta }}
 				</div>	

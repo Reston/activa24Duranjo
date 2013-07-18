@@ -52,10 +52,12 @@
 	padding: 20px 0 20px 0;
 	margin-bottom: 6px;
 }
+.left{
+	text-align: left !important;
+}
 .derecha{
 	text-align: center;	
 	float: left;
-	height: 601px;
 	width: 47%;
 	margin-right: 50px;
 }
