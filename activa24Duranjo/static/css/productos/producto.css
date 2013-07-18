@@ -53,7 +53,10 @@
 	margin-bottom: 6px;
 }
 .left{
-	text-align: left !important;
+	text-align: left;
+}
+.right {
+	text-align: right;
 }
 .derecha{
 	text-align: center;	
@@ -62,7 +65,6 @@
 	margin-right: 50px;
 }
 .categoria{
-	text-align: right;
 	padding: 10px;
 }
 .fb-comments{
