@@ -42,9 +42,23 @@ Lista de producto de la categoría {{ categoria.titulo }} - Activa24 C.A.
 		<section class="oferta">
 			<!-- Se debe hacer un modulo para cargar estas dos imagenes o hacerlo manual estableciendo dos nombres y cambiar eso y ya-->
 			{% for destacado in destacados %}
-			<div class="ofertas">
-				<a href="{{ destacado.get_absolute_url }}"><img src="{{ MEDIA_URL }}/{{ imagenes|getimagen:destacado.id}}" alt="{{destacado.titulo}}"></a>
-			</div>
+			<a href="{{ destacado.get_absolute_url }}">
+				<div class="ofertas">
+					<img src="{{ MEDIA_URL }}/{{ imagenes|getimagen:destacado.id}}" alt="{{destacado.titulo}}">
+					<div class="areaDerecha">
+						<div class="titulo">
+							<div class="tituloProducto">{{destacado.titulo}}</div>
+							<div class="codigoProducto">{{destacado.codigo}}</div>
+						</div>
+						<div class="barraAzul">
+							{% for dol in dolar %}
+								{{dol.dolarEnBolivar|getPrecio:destacado.precio_dolares}}
+							{% endfor %}Bs.							
+						</div>
+						<div class="descripcionCortaProducto">{{destacado.descripcion_corta}}</div>
+					</div>
+				</div>
+			</a>
 			{% endfor %}
 		</section>
 			{% if mensaje %}

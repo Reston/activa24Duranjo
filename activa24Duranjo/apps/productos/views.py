@@ -10,7 +10,7 @@ def producto(request, titulo):
 	producto = Producto.objects.get(titulo=titulo)
 	dolar = ValorDolar.objects.all()[:1]
 	imagenes = ImgProductos.objects.filter(producto=producto)
-	ctx = {'producto': producto, 'imagenes': imagenes, 'dolar':dolar}
+	ctx = {'producto': producto, 'imagenes': imagenes, 'dolar': dolar}
 	return render_to_response('productos/producto.html', ctx, context_instance=RequestContext(request))
 
 
@@ -22,6 +22,10 @@ def categoria(request, template='productos/categoria.html', page_template='produ
 	lista_categorias = Categoria.objects.all()
 	productos = Producto.objects.filter(categoria=categoria.pk)
 	destacados = productos.filter(destacado=True)[:2]
+	if destacados:
+		dolar = ValorDolar.objects.all()[:1]
+	else:
+		dolar = None
 	imagenes = ImgProductos.objects.filter(producto__in=productos)
 	if request.is_ajax():
 		template = page_template
@@ -34,6 +38,7 @@ def categoria(request, template='productos/categoria.html', page_template='produ
 		'page_template': page_template,
 		'productos': productos,
 		'destacados': destacados,
+		'dolar': dolar,
 		'imagenes': imagenes,
 		'lista_categorias': lista_categorias,
 		'mensaje': mensaje
