@@ -147,3 +147,20 @@ to {
 	height: 65%;
 }
 }
+
+@media screen and (max-width: 1000px){
+	.textoHeaderServicios {
+		width: 95%;
+		padding: 0 3%;
+	}
+	.textbuscar {
+		width: auto;
+	}
+}
+@media screen and (max-width: 480px) {
+	.categoriaContainer {
+		width: 60%;
+		margin-left: 20%;
+		margin-bottom: 40px;
+	}
+}

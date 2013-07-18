@@ -73,7 +73,6 @@ border: 15px solid #fff !important;
 }
 .productoContainer{
 	width: 220px;
-	float: left;
 	display: inline-block;
 	margin-left:20px; 
 	margin-bottom: 20px;
@@ -122,4 +121,17 @@ border: 15px solid #fff !important;
 	background: #E6E7E7;
 	text-align: center;
 	height: 250px;
+}
+
+@media screen and (max-width: 1000px){
+	.textbuscar {
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.productoContainer {
+		width: 80%;
+		margin-left: 10%;
+	}
 }

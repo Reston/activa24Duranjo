@@ -206,6 +206,9 @@ footer > .wrapper > div{
 	.logo{
 		text-align: center;
 	}
+	header{
+		height: 100%;
+	}
 	header .logo img {
 		float: none;
 		width: 350px;

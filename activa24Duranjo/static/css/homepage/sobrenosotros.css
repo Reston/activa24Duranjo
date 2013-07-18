@@ -17,8 +17,11 @@ h2{
 	border-top: 5px solid #CCCCCC;
 }
 /* Section quines somos*/
-.quienesSomos, .mision, .vision{
-	height: 460px;
+.quienesSomos, .vision{
+	height: 385px;
+}
+.mision{
+height: 477px;
 }
 .vision{
 	margin-top: 90px;
@@ -54,3 +57,42 @@ h2{
 	width: 510px;
 	float: left;
 }
+.slider{
+	float: left;
+}
+
+
+@media screen and (max-width: 1000px){
+	.wrapper{
+		width: 100%;
+	}
+	.sobreNosotros {
+		background: url('../../img/cream_dust_@2X.png');
+	}
+	.quienesSomos, .mision, .vision {
+		height: auto;
+	}
+	.infoQuienesSomos, .infoMision, .infoVision{
+		width: 95%;
+		margin: 0 auto 0 auto;
+		float: none;
+	}
+	.slider{
+		width: 100%;
+		height: 322px;
+		float: none;
+		text-align: center;
+	}
+	.caroufredsel_wrapper{
+		float: none !important;
+		margin: 0 auto !important;
+		display: inline-block;
+	}
+
+}
+@media screen and (max-width: 480px) {
+	.slider{
+		display: none;
+	}
+}
+

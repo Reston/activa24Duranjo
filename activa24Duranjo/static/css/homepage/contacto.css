@@ -83,3 +83,24 @@ input[type="submit"]{
 	width: 490px;
 	height: 350px;
 }
+
+@media screen and (max-width: 1000px){
+	.formularioContacto{
+		width: 90%;
+		margin-left: 20px;
+	}
+	.informacionContacto{
+		width: 90%;
+		margin-left: 20px;
+	}
+	.map{
+		width: 84%;
+		margin: 20px auto 0 auto;
+	}
+
+}
+@media screen and (max-width: 480px) {
+	.map{
+		display: none;
+	}
+}

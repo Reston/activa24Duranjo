@@ -15,8 +15,7 @@ Acerca de la empresa - Activa24 C.A.
 {% block js %}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script src="{% static 'js/adquiridos/back-top.js' %}"></script>
-<script src="{% static 'js/propios/nosotros.js' %}"></script>
-<script src="{% static 'js/adquiridos/jquery.carouFredSel-6.1.0.js' %}"></script>
+<script src="{% static 'js/adquiridos/jquery.carouFredSel-6.2.1-packed.js' %}"></script>
 {% endblock %}
 {% block navi %}
 		<ul>
@@ -29,13 +28,15 @@ Acerca de la empresa - Activa24 C.A.
 {% block contenido %}
 <section class="sobreNosotros">
 	<div class="wrapper">
+		<h2>Quienes somos</h2>
 		<section class="quienesSomos">
-		<div class="sliderPosition" id="slideUno">	
-		  			<div class="objetoSlide"><img src="{% static 'img/sliderabout1.jpg' %}" alt="Imagen sobre quien es activa24"></div>
-		  			<div class="objetoSlide"><img src="{% static 'img/sliderabout2.jpg' %}" alt="Imagen sobre quien es activa24"></div>
-		</div>	
-				<article class="infoQuienesSomos">
-				<h2>Quienes somos</h2>
+			<div class="slider">
+				<div class="sliderPosition" id="slideUno">	
+					<div class="objetoSlide"><img src="{% static 'img/sliderabout1.jpg' %}" alt="Imagen sobre quien es activa24"></div>
+					<div class="objetoSlide"><img src="{% static 'img/sliderabout2.jpg' %}" alt="Imagen sobre quien es activa24"></div>
+				</div>
+			</div>
+			<article class="infoQuienesSomos">
 				<p>Activa24 C.A. fue creada el 18 de Julio del 2012 en Ciudad Ojeda por iniciativa de un experimentado y visionario empresario de la zona respondiendo a la detección de necesidades y requerimientos de su propio grupo de empresas y de la localidad, proyectando su objetivo a satisfacer las demandas y requerimientos de un mercado general a nivel nacional e internacional</p>
 			</article>
 		</section>
@@ -44,9 +45,11 @@ Acerca de la empresa - Activa24 C.A.
 				<h2>Misión</h2>
 				<p>La misión de la empresa Activa24 C.A., es el desarrollo de proyectos mediante asesorías, mantenimiento, supervisión, configuración, auditoria e instalación de redes de telecomunicación, seguridad electrónica y centros de informática, compra, venta y alquiler de equipos de networking. El objeto comprende además, la prestación de servicios de consultoría, asesorías, gerencia de proyecto y asistencia técnica sobre las materias que conforman el objeto y la adquisición, venta, usufructo, constitución de gravámenes arrendamientos o subarrendamientos de equipos, bienes, infraestructura y suministros consumibles, repuestos infungibles relativos a las comunicaciones, telecomunicaciones y las tecnologías.</p>
 			</article>
-		<div class="sliderPosition" id="slideDos">	
-		  			<div class="objetoSlide"><img src="{% static 'img/sliderabout2.jpg' %}" alt="Imagen sobre quien es activa24"></div>
-		</div>	
+				<div class="slider">
+					<div class="sliderPosition" id="slideDos">	
+							<div class="objetoSlide"><img src="{% static 'img/sliderabout2.jpg' %}" alt="Imagen sobre quien es activa24"></div>
+					</div>
+				</div>	
 			</section>
 		<section class="vision">
 			<article class="infoVision">
@@ -54,17 +57,13 @@ Acerca de la empresa - Activa24 C.A.
 				<p>La visión de Activa24 C.A. es ser la empresa líder prestadora de servicios de tecnología; mediante asesorías, mantenimiento, supervisión, configuración e instalación de redes de telecomunicación y seguridad electrónica sin importar la escala del proyecto. Activa24 C.A. enfoca sus esfuerzos al reconocimiento de sus labores de informática y al mismo tiempo por la adquisición y venta de material tecnológico para cualquier campo, usando marcas líderes con un servicio eficiente.
 				</p>
 			</article>
-		<div class="sliderPosition" id="slideDos">	
-		  			<div class="objetoSlide"><img src="{% static 'img/sliderabout3.jpg' %}" alt="Imagen sobre quien es activa24"></div>
-		</div>	
+			<div class="slider">
+				<div class="sliderPosition" id="slideTres">	
+					<div class="objetoSlide"><img src="{% static 'img/sliderabout3.jpg' %}" alt="Imagen sobre quien es activa24"></div>
+				</div>
+			</div>
 		</section>
 	</div>
 </section>
-	<!-- SLIDER INIT -->
-	<script>
-		$(window).load(function() {
-		  $('.flexslider').flexslider({
-		  });
-		});
-	</script>
+<script src="{% static 'js/propios/nosotros.js' %}"></script>
 {% endblock %}
