@@ -124,7 +124,7 @@ footer > .wrapper > div{
 .listaMenuFooter{
 	list-style: none;
 	padding: 0;
-	font-size: 1.3em;
+	font-size: 1.1em;
 }
 .listaMenuFooter li{
 	margin-bottom: 10px;
@@ -135,11 +135,17 @@ footer > .wrapper > div{
 }
 .footer-izq{
 	text-align: right;
-	margin-top: 183px;
+	margin-top: 115px;
 }
 .footer-med{
-	margin-top: 8%;
+	margin-top: 1%;
 	text-align: center;
+}
+.footer-med p{
+	margin-top: 2em;
+}
+.menosSkype{
+		margin: -26px;
 }
 /* END FOOTER */
 /* Configuración back to top button */
@@ -192,10 +198,6 @@ footer > .wrapper > div{
 	background-color: #777;
 }
 
-.logoactiva24blanco{
-	display: none;
-}
-
 @media screen and (max-width: 1000px){
 	.wrapper{
 		width: 100%;
@@ -227,18 +229,12 @@ footer > .wrapper > div{
 		margin-left: 1%;
 	}
 	.footer-der, .footer-med{
-		width: 48%;
+		width: auto;
 	}
 	.footer-izq{
 		width: 100%;
 		margin-top: 0;
 		text-align: center;
-	}
-	.logoactiva24{
-		display: none;
-	}
-	.logoactiva24blanco{
-		display: block;
 	}
 	.footer-med img {
 		width: 100%;
@@ -262,7 +258,7 @@ footer > .wrapper > div{
 	/* END CONFIG back-to-top */
 
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 483px) {
 	.informacionHeader{
 		text-align: center;
 	}
@@ -281,10 +277,17 @@ footer > .wrapper > div{
 	footer{
 		padding: 0
 	}
-	.footer-med {
-		margin-top: 24%;
+	.footer-der{
+		text-align: center;
 	}
 	.footer-izq{
 		padding-top: 15px;
+	}
+	.footer-der, .footer-med{
+		width: 100%;
+	}
+	.facebookIcon, .twitterIcon{
+		float: none;
+		margin: 0 auto;
 	}
 }

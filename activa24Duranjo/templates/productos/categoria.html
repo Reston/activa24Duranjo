@@ -33,7 +33,7 @@ Lista de producto de la categoría {{ categoria.titulo }} - Activa24 C.A.
 		<section id="productoslista" class="productos">
 			<div class="tituloh2"><h2>{{ categoria.titulo }}</h2></div>
 		<div class="busquedabox">
-			<a class="back-link" href="{% url 'homepageserviciosyproductos' %}">«</a>
+			<a class="back-link" href="{% url 'homepageserviciosyproductos' %}">«Volver</a>
 			<form action="#productoslista" method="POST">	{% csrf_token %}
 				<input class="textbuscar" type="text" name="busqueda">
 				<input class="botonbuscar"type="submit" value="Buscar">

@@ -63,7 +63,6 @@
 		{% block footer %}{% endblock%}
 		<div class="wrapper">
 			<div class="footer-der">
-				<div id="SkypeButton_Dropdown_activa24ca_1" class="skypeComponente"></div>
 				<ul class="listaMenuFooter">
 					<li><a href="{% url 'homepageindex' %}">Inicio</a></li>
 					<li><a href="{% url 'homepageabout' %}">Sobre Nosotros</a></li>
@@ -73,16 +72,23 @@
 				<div class="redesSociales">
 					<a href="https://www.facebook.com/activa24ca"><div class="facebookIcon"></div></a>
 					<a href="https://www.twitter.com/activa24ca"><div class="twitterIcon"></div></a>
-				</div>			
+				</div>
+				<p class="menosSkype">
+					<!-- SKYPE icon-->
+					<script type="text/javascript" src="http://cdn.dev.skype.com/uri/skype-uri.js"></script>
+					<div id="SkypeButton_Call_activa24ca_1" class="skypeComponente"></div>
+					<script type="text/javascript">
+					    Skype.ui({
+					      "name": "call",
+					      "element": "SkypeButton_Call_activa24ca_1",
+					      "participants": ["activa24ca"],
+					      "imageSize": 32
+					    });
+					</script>
+				</p>		
 			</div>
 			<div class="footer-med">
-				<div class="logoactiva24">
-				</div>
-				<div class="logoactiva24blanco">
-					<a href="#home">
-						<img src="{% static 'img/activa24logoblanco.png' %}" alt="Activa24 C.A. Logo">
-					</a>
-				</div>
+				<a href="#home"><div class="logoactiva24"></div></a>				
 				<p>Empresas aliadas</p>
 				<!-- mas pequeño logo abajo -->
 				<div class="logovadecol"></div>
@@ -96,16 +102,6 @@
 				</div>
 			</div>
 		</div>
-	</footer>
-	<!-- SKYPE icon-->
-	<script type="text/javascript" src="http://cdn.dev.skype.com/uri/skype-uri.js"></script>
-	<script type="text/javascript">
-					    Skype.ui({
-					      "name": "dropdown",
-					      "element": "SkypeButton_Dropdown_activa24ca_1",
-					      "participants": ["activa24ca"],
-					      "imageSize": 32
-					    });
-	</script>
+	</footer>	
 </body>
 </html>
