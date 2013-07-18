@@ -12,9 +12,11 @@ Producto {{ producto.titulo }} - Activa24 C.A.
 {% endblock%}
 {% block css%}
 <link rel="stylesheet" href="{% static 'css/productos/producto.css' %}">
+<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
 {% endblock %}
 {% block js %}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="{% static 'js/adquiridos/jquery.flexslider-min.js' %}"></script>
 {% endblock %}
 {% block navi %}
 		<ul>
@@ -27,22 +29,21 @@ Producto {{ producto.titulo }} - Activa24 C.A.
 {% block contenido %}
 <section class="producto">
 	<div class="wrapper">
-		<a class="back-link" href="{{producto.categoria.get_absolute_url}}">«</a>
-		<section class="cuadro">			
-			<div class="miniDescripcion">
-				<div class="tituloh2"><h3>{{ producto.titulo }}</h3></div>
-				{% if producto.disponible %}
-					<h3>Precio: 
-						{% for dol in dolar %}
-							{{dol.dolarEnBolivar|getPrecio:producto.precio_dolares}}
-						{% endfor%}Bs.</h3><!-- Cambiar esto con un templatetag -->
-				{% else %}
-					<h3>Precio: <div class="precioTachado">{{ producto.precio_dolares }} Bs.</div>Producto no disponible</h3>
-				{% endif %}
-				<h4>Categoria: {{ producto.categoria }}</h4>
-				<h4>Código: {{ producto.codigo }}</h4>
-				<div class="mini">
-					{{ producto.descripcion_corta }}
+		<section class="cuadro">	
+		<a class="back-link" href="{{producto.categoria.get_absolute_url}}">«</a>		
+				<h2 class="tituloh2">{{ producto.titulo }}</h2>
+				<div class="codigo">{{ producto.codigo }}</div>
+				<div class="derecha">
+				<div class="sliderimagenes">
+					<div class="flexslider">
+		  				<ul class="slides">
+		  				{% if imagenes %}
+		  				{% for img in imagenes %}
+		  					<li  data-thumb="{{ MEDIA_URL }}/{{img.imagen}}"><img src="{{ MEDIA_URL }}/{{img.imagen}}" alt="{{img.titulo}}"></li>
+		  				{% endfor %}
+		  				{% endif %}
+		  				</ul>
+					</div>		
 				</div>
 				<div class="compartirRedes">
 					<div class="addthis_toolbox addthis_default_style acomodar">
@@ -54,17 +55,43 @@ Producto {{ producto.titulo }} - Activa24 C.A.
 					</div>				
 				</div>
 			</div>
-			<div class="sliderContainer"></div>
-		</section>
-		<section class="productos">
-			<h2>Descripción</h2>
+				<div class="izquierda">
+					{% if producto.disponible %}
+						<div class="precio">
+							<div class="preciotext">PRECIO: </div>
+							<div class="numeroprecio">
+							{% for dol in dolar %}
+								{{dol.dolarEnBolivar|getPrecio:producto.precio_dolares}}
+							{% endfor%}Bs.</div>
+						</div><!-- Cambiar esto con un templatetag -->
+					{% else %}
+						<h3>Precio: <div class="precioTachado">{{ producto.precio_dolares }} Bs.</div>Producto no disponible</h3>
+					{% endif %}
+					<div class="categoria">Categoria: <a href="#">{{ producto.categoria }}</a></div>
+					<div class="mini">
+					{{ producto.descripcion_corta }}
+				</div>	
+				<h3>Descripción</h3>
 			{% autoescape off %}
 				{{ producto.descripcion }}
-			{% endautoescape %}
+			{% endautoescape %}				
+				</div>
+	
 		</section>
 		<div class="fb-comments" data-href="http://www.activa24ca.com{{ request.path }}" data-width="960" data-num-posts="10"></div>
 	</div>
+		<!-- SLIDER INIT -->
+	<script>
+		$(window).load(function() {
+  			$('.flexslider').flexslider({
+    			animation: "slide",
+    			controlNav: "thumbnails"
+  			});
+		});
+	</script>
+
 </section>
+		</div>
 <!-- FACEBOOK SCRIPT -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
