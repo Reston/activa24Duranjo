@@ -39,7 +39,6 @@
 	z-index: 5;
 }
 .campo{
-	height: 75px;
 	margin: 0 auto 10px auto;
 }
 
@@ -61,7 +60,29 @@ textarea{
 	border: 1px solid #CCCCCC;
 	width: 84%;
 }
-
+.errorlist{
+	border: 1px solid #F00;
+	background: #FFC0CB;
+	color: #F00;
+	list-style: none;
+	margin: 10px 0;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	width: 82%;
+	text-shadow: 0px 1px rgba(255, 255, 255, 0.5);
+	padding: 10px 0 10px 2%;
+}
+.enviado{
+	border: 1px solid #008000;
+	background: lightgreen;
+	color: #008000;
+	margin: 10px 0;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	width: 82%;
+	text-shadow: 0px 1px rgba(255, 255, 255, 0.5);
+	padding: 10px 0 10px 2%;
+}
 input[type="submit"]{
 	margin-top: 10px;
 	background: gray;
@@ -82,6 +103,66 @@ input[type="submit"]{
 .map{
 	width: 490px;
 	height: 350px;
+}
+
+.infoContacto{
+	background: url('../img/lightpaperfibers_@2X.png');
+	padding-top: 30px;
+	text-align: center;
+}
+
+.tituloOpcionInfo{
+	background: #8CA6E9;
+	font-size: 1.2em;
+	font-weight: bold;
+	padding: 5px 0;
+}
+.infoOpcion{
+	text-align: left;
+	font-size: 1.1em;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.telefonosNumeros{
+	list-style: none;
+	margin:0;
+}
+.infoDerecha{
+	display: inline-block;
+	width: 49.55%;
+}
+.infoIzquierda{
+	vertical-align: top;
+	display: inline-block;
+	width: 49.55%;
+}
+.opcionInfo{
+	position: relative;
+}
+.correo{
+	position: absolute;
+	top: -13px;
+	left: -14px;
+	background: url(../../img/iconos.png) -40px 0;
+	width: 45px;
+	height: 50px;
+}
+.telefonos{
+	position: absolute;
+	top: -9px;
+	left: -8px;
+	background: url(../../img/iconos.png) 0 0;
+	width: 40px;
+	height: 50px;
+}
+
+.paginaweb{
+	position: absolute;
+	top: -13px;
+	left: -14px;
+	background: url(../../img/iconos.png) 40px 0;
+	width: 40px;
+	height: 50px;
 }
 
 @media screen and (max-width: 1000px){

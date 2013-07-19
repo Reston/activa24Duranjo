@@ -74,7 +74,7 @@
 }
 
 .categoriaTitulo{
-
+	font-weight: bold;
 	color: white;
 	text-align: center;
 	line-height: 35px;
