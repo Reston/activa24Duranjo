@@ -46,10 +46,11 @@
 	text-align: center;
 }
 .tituloProducto{
-	font-size: 1.2em;
+	font-size: 1em;
 	color: #000;
 	margin: 5px 0;
 	text-transform: uppercase;
+	font-weight: bold;
 }
 .codigoProducto{
 	font-size: 1.1em;
