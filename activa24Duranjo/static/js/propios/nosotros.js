@@ -3,14 +3,14 @@ $(document).ready(function(){
         circular    : true,
         infinite    : true,
         direction   : "up",
-        width       : 450,     // automatically calculated
-        height      : 322,     // automatically calculated
+        width       : "auto",     // automatically calculated
+        height      : "auto",     // automatically calculated
         align       : "center",
         padding     : 0,
         items       : {
             visible         : 1,     //  automatically calculated
-            width           : 450,     //  automatically calculated
-            height          : 322     //  automatically calculated
+            width           : "auto",     //  automatically calculated
+            height          : "auto"     //  automatically calculated
         },
         scroll      : {
             items           : 1,     //  items.visible
@@ -29,14 +29,14 @@ $(document).ready(function(){
         circular    : true,
         infinite    : true,
         direction   : "up",
-        width       : 450,     // automatically calculated
-        height      : 322,     // automatically calculated
+        width       : "auto",     // automatically calculated
+        height      : "auto",     // automatically calculated
         align       : "center",
         padding     : 0,
         items       : {
             visible         : 1,     //  automatically calculated
-            width           : 450,     //  automatically calculated
-            height          : 322     //  automatically calculated
+            width           : "auto",     //  automatically calculated
+            height          : "auto"     //  automatically calculated
         },
         scroll      : {
             items           : 1,     //  items.visible
@@ -55,14 +55,14 @@ $(document).ready(function(){
         circular    : true,
         infinite    : true,
         direction   : "up",
-        width       : 450,     // automatically calculated
-        height      : 322,     // automatically calculated
+        width       : "auto",     // automatically calculated
+        height      : "auto",     // automatically calculated
         align       : "center",
         padding     : 0,
         items       : {
             visible         : 1,     //  automatically calculated
-            width           : 450,     //  automatically calculated
-            height          : 322     //  automatically calculated
+            width           : "auto",     //  automatically calculated
+            height          : "auto"     //  automatically calculated
         },
         scroll      : {
             items           : 1,     //  items.visible
@@ -77,6 +77,5 @@ $(document).ready(function(){
             pauseOnHover    : true     //  scroll.pauseOnHover
         }
     });
-
 
 });
