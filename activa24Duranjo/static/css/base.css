@@ -87,6 +87,9 @@ footer > .wrapper > div{
 .footer-der, .footer-med, .footer-izq{
 	width: 33%;
 }
+.footer-der{
+	margin-top: 14px;
+}
 .skypeComponente > p{
 	margin: 0;
 	height: 70px;

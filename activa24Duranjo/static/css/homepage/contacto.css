@@ -18,9 +18,8 @@
 .logoAgua{
 	background: url('../../img/activa24logo.png') no-repeat;
 	position: absolute;
-	bottom: 5%;
-	right: 25%;
-	margin: 0;
+	bottom: 11%;
+	margin-left: 5%;
 	width: 340px;
 	height: 80px;
 	-webkit-transform:scale(1.4);
@@ -112,7 +111,7 @@ input[type="submit"]{
 }
 
 .tituloOpcionInfo{
-	background: #8CA6E9;
+	background: #F0F0F0;
 	font-size: 1.2em;
 	font-weight: bold;
 	padding: 5px 0;

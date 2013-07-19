@@ -84,9 +84,9 @@ google.maps.event.addDomListener(window, 'load', initialize);
 						{{ form.telefono }}
 						{{ form.telefono.errors }}
 					</div>
-					<div class="textareaDescripcion">
+					<div class="textareaDescripcion campo">
 						{{ field.errors }}
-						<label for="texto">Breve descripción de su proyecto: </label>
+						<label for="texto">Mensaje: </label>
 						{{ form.texto }}
 						{{ form.texto.errors }}
 					</div>
@@ -101,10 +101,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
 				<div id="map-canvas"></div>
 			</div>
 			<div class="infoContacto">
-				<div class="titulo">
-					<h3>Información de contacto.</h3>
-				</div>
 				<div class="opcionesContacto">
+					<div class="opcionInfo">						
+						<div class="tituloOpcionInfo"><div class="paginaweb"></div>Dirección:</div>
+						<div class="infoOpcion">Dirección: Av. Intercomunal, Edificio Zulia, Piso 1, Oficina 101 Ciudad Ojeda</div>
+					</div>					
 					<div class="opcionInfo">						
 						<div class="tituloOpcionInfo"><div class="correo"></div>Correo:</div>
 						<div class="infoOpcion">contacto@activa24ca.com</div>
@@ -118,10 +119,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
 								<li>De 8:00 AM a 7:00 PM</li>
 							</ul>
 						</div>
-					</div>
-					<div class="opcionInfo">						
-						<div class="tituloOpcionInfo"><div class="paginaweb"></div>Dirección:</div>
-						<div class="infoOpcion">Dirección: Av. Intercomunal, Edificio Zulia, Piso 1, Oficina 101 Ciudad Ojeda</div>
 					</div>
 				</div>
 			</div>
