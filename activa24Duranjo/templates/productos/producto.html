@@ -29,10 +29,8 @@ Producto {{ producto.titulo }} - Activa24 C.A.
 {% block contenido %}
 <section class="producto">
 	<div class="wrapper">
+		<a class="back-link" href="{{producto.categoria.get_absolute_url}}">«Volver</a>				
 		<section class="cuadro">	
-		<a class="back-link" href="{{producto.categoria.get_absolute_url}}">«Volver</a>		
-				<h2 class="tituloh2">{{ producto.titulo }}</h2>
-				<div class="codigo">{{ producto.codigo }}</div>
 				<div class="derecha">
 				<div class="sliderimagenes">
 					<div class="flexslider">
@@ -56,6 +54,8 @@ Producto {{ producto.titulo }} - Activa24 C.A.
 				</div>
 			</div>
 				<div class="izquierda">
+				<h2 class="tituloh2">{{ producto.titulo }}</h2>
+				<div class="codigo">{{ producto.codigo }}</div>					
 					{% if producto.disponible %}
 						<div class="precio">
 							<div class="preciotext">PRECIO: </div>
@@ -80,7 +80,9 @@ Producto {{ producto.titulo }} - Activa24 C.A.
 				</div>
 	
 		</section>
+		<div class="face">
 		<div class="fb-comments" data-href="http://www.activa24ca.com{{ request.path }}" data-width="960" data-num-posts="10"></div>
+		</div>
 	</div>
 		<!-- SLIDER INIT -->
 	<script>
