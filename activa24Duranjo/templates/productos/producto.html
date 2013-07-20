@@ -66,7 +66,7 @@ Producto {{ producto.titulo }} - Activa24 C.A.
 						</div><!-- Cambiar esto con un templatetag -->
 					<div class="categoria right">Categoria: <a href="#">{{ producto.categoria }}</a></div>
 					{% else %}
-						<h3>Precio: <div class="precioTachado">{{ producto.precio_dolares }} Bs.</div>Producto no disponible</h3>
+						<h3>Precio: <div class="precioTachado">{{ producto.precio_dolares }} Bs.</div><div class="nodisponible">Producto no disponible</div></h3>
 					<div class="categoria left">Categoria: <a href="#">{{ producto.categoria }}</a></div>						
 					{% endif %}
 

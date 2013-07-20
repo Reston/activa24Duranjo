@@ -51,12 +51,14 @@
 	height: auto;
 	background-color: #3953A0;
 	color: white;
-	padding: 20px 0 20px 0;
+	padding: 12px 0 12px 0;
 	margin-bottom: 6px;
 }
-
+.nodisponible{
+	color: rgb(224, 18, 18);
+}
 .left{
-	text-align: left;
+	text-align: left !important;
 }
 
 .derecha{
