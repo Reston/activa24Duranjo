@@ -21,7 +21,7 @@ h2{
 	height: 385px;
 }
 .mision{
-height: 477px;
+	height: 477px;
 }
 .vision{
 	margin-top: 90px;
@@ -63,7 +63,7 @@ height: 477px;
 		width: 100%;
 	}
 	.sobreNosotros {
-		background: url('../../img/cream_dust_@2X.png');
+		background: url(../../img/cream_dust_@2X.png);
 	}
 	.quienesSomos, .mision, .vision {
 		height: auto;
@@ -72,6 +72,7 @@ height: 477px;
 		width: 95%;
 		margin: 0 auto 0 auto;
 		float: none;
+		line-height: 1.5em;
 	}
 	.slider{
 		width: 100%;
@@ -84,7 +85,6 @@ height: 477px;
 		margin: 0 auto !important;
 		display: inline-block;
 	}
-
 }
 @media screen and (max-width: 480px) {
 	.slider{
