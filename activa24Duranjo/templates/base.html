@@ -37,9 +37,6 @@
 	<header id="home" class="cabecera">
 		<div class="wrapper">
 			<div class="informacionHeader">
-				<div class="rifInfo">
-					<p>RIF: J-40172941-0</p>
-				</div>
 				<div class="contactoInfo">
 					<p>Teléfonos: (+58) 265 415 0126 </p>
 					<img src="{% static 'img/banderita.png' %}" alt="bandera de Venezuela">					
@@ -49,7 +46,11 @@
 				<a href="{% url 'homepageindex' %}" title="Activa 24 C.A.">
 					<img src="{% static 'img/activa24logo.png' %}" alt="logo activa24">
 				</a>
-			</div>		
+				<div class="rifInfo">
+					<p>RIF: J-40172941-0</p>
+				</div>
+			</div>	
+
 			<nav class="barraNavegacion">
 				{% block navi %} {% endblock%}
 			</nav>

@@ -32,7 +32,10 @@ header{
 	height: 40px;
 }
 .rifInfo{
-	float: left;
+	float: right;
+	font-size: 11px;
+	margin-top: -14px;
+	margin-right: 114px;
 }
 .rifInfo p{
 	margin: 0;
@@ -48,6 +51,9 @@ header{
 header .logo img{
 	width: 250px;
 	float: left;
+}
+.logo{
+	width: 250px;
 }
 nav{
 	text-align: right;
