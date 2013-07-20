@@ -90,14 +90,24 @@
 	.face{
 		display: none;
 	}
+	.derecha{
+		float: none;
+		width: 50%;
+		margin-left: 25%;
+		margin-bottom: 1%;
+	}
+	.izquierda{
+		margin-left: 10px;
+	}
 }
 @media screen and (max-width: 480px) {
 	.derecha{
-		width: 100%;
+		width: 60%;
+		margin-left: 20%;
 	}
 	.izquierda{
 		width: 90%;
-		margin-left: 10%;
+		margin-left: 5%;
 	}
 	.precio{
 		width: 100%;
