@@ -92,8 +92,8 @@
 .categoriaContainer:hover .bluebox{
 	bottom: 0;
 	height: 65%;
-	animation:boxEfecto 1s;
-	-webkit-animation:boxEfecto 1s; /* Safari and Chrome */
+	animation:boxEfecto 0.5s;
+	-webkit-animation:boxEfecto 0.5s; /* Safari and Chrome */
 
 }
 .endless_container{
