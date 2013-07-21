@@ -3,6 +3,9 @@ header{
 	position: absolute;
 	z-index: 10;
 }
+h1{
+	display: none;
+}
 .index a{
 	background: black;
 	background: rgba(56, 75, 213, 0.8)
