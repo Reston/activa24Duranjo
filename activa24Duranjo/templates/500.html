@@ -1,0 +1,13 @@
+{% extends "homepage/index.html" %} 	
+{% block title %}Página no disponible{% endblock %}
+{% block css%}
+<link rel="stylesheet" href=" {{ STATIC_URL }}css/index.css">
+<link rel="stylesheet" href=" {{ STATIC_URL }}css/500and404.css">
+{% endblock%}
+{% block contenido %}
+<section class="fondoerror">
+	<div class="error500">
+		Error 500: Error en el servidor.
+	</div>
+</section>
+{% endblock %}
