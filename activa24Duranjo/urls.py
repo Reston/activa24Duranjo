@@ -27,7 +27,11 @@ urlpatterns = patterns(
 )
 
 if settings.DEBUG:
+	from django.views.generic import TemplateView
 	urlpatterns += patterns(
 		'',
+		url(r'^404/$', TemplateView.as_view(template_name="404.html")),
+		url(r'^403/$', TemplateView.as_view(template_name="403.html")),
+		(r'^500/$', TemplateView.as_view(template_name="500.html")),
 		(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
 	)

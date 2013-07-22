@@ -1,11 +1,14 @@
 {% extends "homepage/index.html" %} 	
 {% block title %}Página con acceso denegado{% endblock %}
 {% block css%}
-<link rel="stylesheet" href=" {{ STATIC_URL }}css/index.css">
+<link rel="stylesheet" href=" {{ STATIC_URL }}css/base.css">
+<link rel="stylesheet" href=" {{ STATIC_URL }}css/homepage/index.css">
 <link rel="stylesheet" href=" {{ STATIC_URL }}css/500and404.css">
 {% endblock%}
 {% block contenido %}
 <section class="fondoerror">
+	<div class="error403">
 	Error 403: Acceso limitado.
+	</div>
 </section>
 {% endblock %}
