@@ -50,9 +50,13 @@ Lista de producto de la categoría {{ categoria.titulo }} - Activa24 C.A.
 							<div class="codigoProducto">{{destacado.codigo}}</div>
 						</div>
 						<div class="barraAzul">
+						{% if destacado.precio_dolares == 0.00 %}
+						 Servicio
+						{% else %}
 							{% for dol in dolar %}
 								{{dol.dolarEnBolivar|getPrecio:destacado.precio_dolares}}
-							{% endfor %}Bs.							
+							{% endfor %}Bs.	
+						{% endif %}						
 						</div>
 						<div class="descripcionCortaProducto">{{destacado.descripcion_corta}}</div>
 					</div>
