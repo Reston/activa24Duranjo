@@ -6,11 +6,14 @@ from activa24Duranjo.apps.productos.models import Categoria, Producto, ImgProduc
 
 
 def producto(request, titulo):
+	servicio= False
 	titulo = titulo.replace('_', ' ')
 	producto = Producto.objects.get(titulo=titulo)
 	dolar = ValorDolar.objects.all()[:1]
 	imagenes = ImgProductos.objects.filter(producto=producto)
-	ctx = {'producto': producto, 'imagenes': imagenes, 'dolar': dolar}
+	if (producto.precio_dolares == 0):
+		servicio= True
+	ctx = {'producto': producto, 'imagenes': imagenes, 'dolar': dolar, 'servicio':servicio}
 	return render_to_response('productos/producto.html', ctx, context_instance=RequestContext(request))
 
 

@@ -54,7 +54,10 @@ Producto {{ producto.titulo }} - Activa24 C.A.
 			</div>
 				<div class="izquierda">
 				<h2 class="tituloh2">{{ producto.titulo }}</h2>
-				<div class="codigo">{{ producto.codigo }}</div>					
+				<div class="codigo">{{ producto.codigo }}</div>	
+				{% if servicio %}
+					<div class="categoria left">Categoria: <a href="#">{{ producto.categoria }}</a></div>
+				{% else %}
 					{% if producto.disponible %}
 						<div class="precio">
 							<div class="preciotext">PRECIO: </div>
@@ -63,12 +66,13 @@ Producto {{ producto.titulo }} - Activa24 C.A.
 								{{dol.dolarEnBolivar|getPrecio:producto.precio_dolares}}
 							{% endfor%}Bs.</div>
 						</div><!-- Cambiar esto con un templatetag -->
+
 					<div class="categoria right">Categoria: <a href="#">{{ producto.categoria }}</a></div>
 					{% else %}
 						<h3>Precio: <div class="precioTachado">{{ producto.precio_dolares }} Bs.</div><div class="nodisponible">Producto no disponible</div></h3>
 					<div class="categoria left">Categoria: <a href="#">{{ producto.categoria }}</a></div>						
 					{% endif %}
-
+				{% endif %}
 					<div class="mini">
 					{{ producto.descripcion_corta }}
 				</div>	
