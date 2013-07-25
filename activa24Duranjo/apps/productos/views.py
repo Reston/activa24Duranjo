@@ -3,17 +3,18 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from activa24Duranjo.apps.productos.models import Categoria, Producto, ImgProductos, ValorDolar
+from django.shortcuts import get_object_or_404
 
 
 def producto(request, titulo):
-	servicio= False
+	servicio = False
 	titulo = titulo.replace('_', ' ')
-	producto = Producto.objects.get(titulo=titulo)
+	producto = get_object_or_404(Producto, titulo=titulo)
 	dolar = ValorDolar.objects.all()[:1]
 	imagenes = ImgProductos.objects.filter(producto=producto)
 	if (producto.precio_dolares == 0):
-		servicio= True
-	ctx = {'producto': producto, 'imagenes': imagenes, 'dolar': dolar, 'servicio':servicio}
+		servicio = True
+	ctx = {'producto': producto, 'imagenes': imagenes, 'dolar': dolar, 'servicio': servicio}
 	return render_to_response('productos/producto.html', ctx, context_instance=RequestContext(request))
 
 
