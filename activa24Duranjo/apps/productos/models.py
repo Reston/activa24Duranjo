@@ -3,7 +3,6 @@ from django.db import models
 from tinymce.models import HTMLField
 from django.core.urlresolvers import reverse
 from decimal import Decimal
-from django.core.validators import RegexValidator
 
 
 class Categoria(models.Model):
