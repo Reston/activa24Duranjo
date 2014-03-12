@@ -46,7 +46,7 @@ def contact(request):
 			cd = form.cleaned_data
 			asunto = u'Por: %s mail: %s RIF: %s ' % (cd['nombre'], cd['email'], cd['rif'])
 			content = u'Email contacto: %s \nAsunto: %s \nTelefono: %s \nDescripcion: %s' % (cd['email'], asunto, cd['telefono'], cd['texto'])
-			send_mail(asunto, content, cd['email'], ['contacto@activa24ca.com'])
+			send_mail(asunto, content, 'contacto@activa24ca.com', ['contacto@activa24ca.com'])
 	else:
 		form = contactForm()
 	ctx = {'form': form, 'success': success}
