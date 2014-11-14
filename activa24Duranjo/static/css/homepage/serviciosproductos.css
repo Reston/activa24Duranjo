@@ -4,7 +4,7 @@
 }
 .services a{
 	background: black;
-	background: rgba(56, 75, 213, 0.8)
+	background: rgba(213, 56, 56, 0.8);
 }
 .serviciosProductos{
 	border-top: 5px solid #CCCCCC;
@@ -26,7 +26,7 @@
 	padding: 15px;
 }
 .tituloAzul{
-	background: #3953a0;
+	background: #B20705;
 	width: 272px; /* Mientras la imagen tenga este tamaño por el borde*/
 	height: 30px;
 	line-height: 30px;
@@ -83,7 +83,7 @@
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	background: rgba(57, 83, 160,0.8);
+	background: rgba(160, 57, 57, 0.8);
 	height: 35px;
 	overflow: hidden;
 	text-align: center;

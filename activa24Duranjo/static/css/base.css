@@ -1,10 +1,11 @@
 @charset 'utf-8';
+/*#B20705 color oficial, #D52F2F*/
 body{
 	margin: 0;
 }
 h2{
 	margin-top: 0;
-	color: #3651A0;
+	color: #D52F2F;
 	text-align: center;
 	text-transform: uppercase;
 	border-bottom: 2px solid #D1D1D1;
@@ -73,7 +74,7 @@ nav a{
 }
 nav a:hover{
 	background: blue;
-	background: rgba(56, 163, 213, 0.8);
+	background: rgba(240, 14, 14, 0.8);
 }
 nav li:first-child a{
 	border-left: none;
@@ -81,10 +82,10 @@ nav li:first-child a{
 /* END HEADER */
 /* FOOTER */
 footer{
-	background: #3953A0;
+	background: #B20705;
 	padding: 0 0 30px 0;
 	color: white;
-	border-top: 5px solid #8CA6E9;
+	border-top: 5px solid #E98C8C;
 }
 footer > .wrapper > div{
 	display: inline-block;

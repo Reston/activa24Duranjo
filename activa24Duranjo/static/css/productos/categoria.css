@@ -55,11 +55,11 @@
 .codigoProducto{
 	font-size: 1.1em;
 	margin: 5px 0;
-	color: #1D56A3;
+	color: #A31D1D;
 
 }
 .barraAzul{
-	background: #1D56A3;
+	background: #A31D1D;
 	padding: 10px 0;
 	color: white;
 	font-size: 1.3em;
@@ -140,7 +140,7 @@ border: 15px solid #fff !important;
 	width: 100%;
 }
 .productoTitulo{
-	background: rgba(57, 83, 160,0.8);
+	background: rgba(160, 57, 57, 0.8);
 	color: white;
 	text-align: center;
 	height: 35px;

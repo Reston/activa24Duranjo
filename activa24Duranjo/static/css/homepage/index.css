@@ -8,7 +8,7 @@ h1{
 }
 .index a{
 	background: black;
-	background: rgba(56, 75, 213, 0.8)
+	background: rgba(213, 56, 56, 0.8);
 }
 .contactoInfo p{
 	text-shadow: 0 0 4px black;
@@ -18,7 +18,7 @@ h1{
 .flexslider{
 	background: #fff url(../../img/loader.gif) no-repeat center center !important;
 	overflow: hidden;
-	height: auto;
+	height: 593px;
 	margin: 0 !important;
 	border: none !important;
 }
@@ -61,6 +61,7 @@ h1{
 	text-align: justify;
 	display: inline-block;
 	vertical-align: top;
+	line-height: 1.8em;
 }
 .monitorCamaras{
 	position: relative;
@@ -110,7 +111,7 @@ h1{
 	border-left:none;
 }
 .tituloh3{
-	color: #3651A0;
+	color: #D52F2F;
 	font-size: 0.8em;
 	text-transform: uppercase;
 	text-align: right;
@@ -161,6 +162,9 @@ h1{
 	}
 	.productContainer img {
 		width: 80%;
+	}
+	.flexslider{
+		height: auto;
 	}
 }
 

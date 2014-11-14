@@ -9,7 +9,7 @@ h2{
 }
 .about a{
 	background: black;
-	background: rgba(56, 75, 213, 0.8);
+	background: rgba(213, 56, 56, 0.8);
 }
 .sobreNosotros{
 	background: url('../../img/lineaabout.png') no-repeat center 30px, url('../../img/cream_dust_@2X.png');
