@@ -1,4 +1,8 @@
 @charset 'utf-8';
+.categoria{
+	padding: 60px 0 0 0;
+	border-top: 5px solid #CCC;
+}
 .contactoInfo p{
 	color: black;
 }
@@ -65,7 +69,8 @@
 	height: 225px;
 	vertical-align: bottom;
 	color: white;
-	margin-top: 50PX;
+	margin-top: 50px;
+	outline: 1px solid #808080;
 }
 .categoriaContainer img{
 	text-align: center;
@@ -153,7 +158,48 @@ to {
 	height: 65%;
 }
 }
-
+.oferta{
+	padding: 50px 0;
+}
+.departamentoContainer{
+	display: inline-block;
+	vertical-align: top;
+	width: 29%;
+	text-align: center;
+	background: #B20705;
+	padding: 1em;
+	padding-top: 11%;
+	position: relative;
+	margin-top: 11%;
+	margin-left: 1%;
+}
+.departamentoContainer a{
+	text-decoration: none;
+	color: white;
+}
+.departamentoContainer img{
+	-webkit-border-radius: 300px;
+	-moz-border-radius: 300px;
+	border-radius: 300px;
+	width: 220px;
+	height: 220px;
+	position: absolute;
+	top: -40%;
+	left: 50px;
+}
+.departamentoTitulo{
+	font-size: 2.5em;
+}
+.leermas{
+	display: block;
+	width: 35%;
+	padding: 0.5em;
+	background: #808080;
+	font-size: 1.5em;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 10px;
+}
 @media screen and (max-width: 1000px){
 	.textoHeaderServicios {
 		width: 95%;
@@ -162,6 +208,18 @@ to {
 	.textbuscar {
 		width: auto;
 	}
+	.departamentoContainer {
+		width: 45%;
+		padding: 0;
+		margin: 0;
+		position: relative;
+	}
+	.departamentoContainer img{
+		position: static;
+	}
+	.leermas{
+		width: 50%;
+	}
 }
 @media screen and (max-width: 480px) {
 	.categoriaContainer {
@@ -169,5 +227,9 @@ to {
 		margin-left: 20%;
 		margin-bottom: 40px;
 		margin-top: 20PX;
+	}
+	.departamentoContainer{
+		width: 100%;
+		margin-bottom: 1em;
 	}
 }

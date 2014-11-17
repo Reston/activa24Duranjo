@@ -12,7 +12,7 @@ class StaticViewSitemap(sitemaps.Sitemap):
 		return [
 				'homepageindex',
 				"homepageabout",
-				"homepageserviciosyproductos",
+				"departamento",
 				"homapagecontact",
 				]
 

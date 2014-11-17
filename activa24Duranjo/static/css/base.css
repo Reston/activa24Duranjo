@@ -272,8 +272,8 @@ footer > .wrapper > div{
 	.informacionHeader{
 		text-align: center;
 	}
-	header .logo img{
-		width: 300px;
+	header .logo img {
+		width: 100%;
 	}
 	nav ul{
 		margin: 15px 0 0 0;

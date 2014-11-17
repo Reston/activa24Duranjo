@@ -9,7 +9,6 @@
 	clear: both;
 	line-height: 0;
 	position: relative;
-	bottom: -35px;
 }
 .flexslider{
 	float: left !important;
@@ -113,5 +112,11 @@
 	.precio{
 		width: 100%;
 		text-align: center;
+	}
+	.compartirRedes{
+		display: none;
+	}
+	.back-link{
+		line-height: 1em;
 	}
 }

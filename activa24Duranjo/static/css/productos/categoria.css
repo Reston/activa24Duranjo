@@ -175,6 +175,7 @@ border: 15px solid #fff !important;
 	.ofertas{
 		width: 100%;
 		border-bottom: 1px solid #333;
+		text-align: center;
 	}
 	.areaDerecha{
 		width: 60%;

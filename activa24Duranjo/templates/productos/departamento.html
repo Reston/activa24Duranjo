@@ -46,8 +46,9 @@ Departamentos - Activa24 C.A.
 					<img src="{{ MEDIA_URL }}/{{departamento.imagen}}" alt="{{departamento.titulo}} imagen">
 					<div class="departamentoTitulo">{{ departamento.titulo }}</div>
 					<div class="departamentoDescripcion">
-						{{ departamento.descripcion_corta }}
+						{{ departamento.breve_descripcion }}
 					</div>
+					<div class="leermas">Leer más</div>
 				</a>
 			</div>		
 			{% endfor %}
