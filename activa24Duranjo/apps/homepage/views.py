@@ -15,27 +15,11 @@ def index(request):
 	ctx = {'slideritem': slideritem, 'productos': productos, 'imagenes': imagenes}
 	return render_to_response('homepage/index.html', ctx, context_instance=RequestContext(request))
 
-
 def about(request):
 	mision = "misión de la empresa"
 	vision = "visión de la empresa"
 	ctx = {'mision': mision, 'vision': vision}
 	return render_to_response('homepage/sobrenosotros.html', ctx, context_instance=RequestContext(request))
-
-
-def serviciosyproductos(request, template='homepage/serviciosproductos.html', page_template='homepage/serviciosproductos_categorias.html'):
-	palabra_busqueda = request.POST.get('busqueda', '')
-	mensaje = ''
-	categorias = Categoria.objects.all()
-	if request.is_ajax():
-		template = page_template
-	if (palabra_busqueda):
-		categorias = Categoria.objects.filter(titulo__icontains=palabra_busqueda)
-		if not (categorias):
-			mensaje = "No se han encontrado resuldos para "+palabra_busqueda
-	ctx = {'categorias': categorias, 'page_template': page_template, 'mensaje': mensaje}
-	return render_to_response(template, ctx, context_instance=RequestContext(request))
-
 
 def contact(request):
 	success = False

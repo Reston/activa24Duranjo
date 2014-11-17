@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from activa24Duranjo.apps.productos.models import Categoria, Producto, ImgProductos, ValorDolar
+from activa24Duranjo.apps.productos.models import Departamento, Categoria, Producto, ImgProductos, ValorDolar
 from django.shortcuts import get_object_or_404
 
 
@@ -49,3 +49,22 @@ def categoria(request, titulo, template='productos/categoria.html', page_templat
 		'mensaje': mensaje
 	}
 	return render_to_response(template, ctx, context_instance=RequestContext(request))
+
+def serviciosyproductos(request, titulo, template='productos/serviciosproductos.html', page_template='productos/serviciosproductos_categorias.html'):
+	palabra_busqueda = request.POST.get('busqueda', '')
+	mensaje = ''
+	departamento = get_object_or_404(Departamento, titulo=titulo)
+	categorias = Categoria.objects.filter(departamento=departamento.pk)
+	if request.is_ajax():
+		template = page_template
+	if (palabra_busqueda):
+		categorias = Categoria.objects.filter(titulo__icontains=palabra_busqueda)
+		if not (categorias):
+			mensaje = "No se han encontrado resuldos para "+palabra_busqueda
+	ctx = {'departamento': departamento, 'categorias': categorias, 'page_template': page_template, 'mensaje': mensaje}
+	return render_to_response(template, ctx, context_instance=RequestContext(request))
+
+def departamento(request):
+	departamentos = Departamento.objects.all()
+	ctx = {'departamentos': departamentos}
+	return render_to_response('productos/departamento.html', ctx, context_instance=RequestContext(request))

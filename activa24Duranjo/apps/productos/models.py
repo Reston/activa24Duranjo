@@ -17,7 +17,7 @@ class Departamento(models.Model):
 
 	def get_absolute_url(self):
 		titulo = self.titulo.replace(' ', '_')
-		return reverse('categoria', kwargs={'titulo': titulo})
+		return reverse('serviciosyproductos', kwargs={'titulo': titulo})
 		
 class Categoria(models.Model):
 	titulo = models.CharField(max_length=20, help_text='Hasta 20 caracteres y solamente alfanuméricos', unique=True)
@@ -25,6 +25,7 @@ class Categoria(models.Model):
 	imagen = models.ImageField(upload_to='imgcategorias')
 	creado_en = models.DateTimeField(auto_now_add=True, editable=False)
 	modificado_en = models.DateTimeField(auto_now=True)
+	departamento = models.ForeignKey(Departamento)
 
 	def __unicode__(self):
 		return self.titulo
