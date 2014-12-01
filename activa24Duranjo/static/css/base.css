@@ -113,11 +113,17 @@ footer > .wrapper > div{
 	height: 35px;
 	float: left;
 }
+.googleIcon{
+	background: url('../img/logosblancos.png') 35px -75px;
+	width: 35px;
+	height: 35px;
+	float: left;
+}
 .footer-med img{
 	width: 256px;
 }
 .logoDuranjo img{
-	width: 128px;
+	width: 70px;
 }
 .logoactiva24{
 	margin: 0 auto 0 auto;
@@ -156,6 +162,10 @@ footer > .wrapper > div{
 }
 .menosSkype{
 		margin: -26px;
+}
+.copyright{
+	text-align: center;
+	width: 100%;
 }
 /* END FOOTER */
 /* Configuración back to top button */
@@ -297,7 +307,7 @@ footer > .wrapper > div{
 	.footer-der, .footer-med{
 		width: 100%;
 	}
-	.facebookIcon, .twitterIcon{
+	.facebookIcon, .twitterIcon, .googleIcon{
 		float: none;
 		margin: 0 auto;
 	}

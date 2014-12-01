@@ -12,11 +12,14 @@ Página principal - Activa24 C.A.
 {% block css%}
 <link rel="stylesheet" href="{% static 'css/homepage/index.css' %}">
 <link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+<link rel="stylesheet" href="{% static 'css/jquery.fancybox.css' %}">
 {% endblock %}
 {% block js %}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="{% static 'js/adquiridos/back-top.js' %}"></script>
 <script src="{% static 'js/adquiridos/jquery.flexslider-min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/fancybox/source/jquery.fancybox.pack.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/fancybox/source/helpers/jquery.fancybox-media.js' %}"></script>
 {% endblock %}
 {% block navi %}
 		<ul>
@@ -44,15 +47,18 @@ Página principal - Activa24 C.A.
 	<section class="aboutus">
 		<div class="wrapper">
 			<div class="tituloh2"><h2>Sobre Nosotros</h2></div>
-			<div class="monitorCamaras">
-				<div class="imagenstatic">
-				</div>
-				<img src="{% static 'img/pantallaapple.png' %}" alt="camara vigilancia"></div>
 			<div class="textoSobreNosotros">
 				<p>Ofrecemos soluciones totalmente integradas de sistemas de seguridad, vigilancia electrónica y monitoreo centralizado. 
 				Mediante la asesoría, instalación y administración de equipos de vigilancia, sistemas antirrobo, seguridad perimetral y control de acceso.
 				Para proveer una protección confiable a nuestros clientes y sus bienes.
 				</p>
+			</div>
+			<div class="video">
+				<a class="fancybox-media" href="https://www.youtube.com/watch?v=EY-iGvUdwtk">
+					<div class="titulo">Video: Parking inteligente.</div>
+					<div class="playIcon"></div>
+					<img src="http://img.youtube.com/vi/EY-iGvUdwtk/0.jpg" alt="Beneficios de ASPROVA en Artes Gráficas.">
+				</a>
 			</div>
 		</div>
 	</section>
@@ -84,6 +90,17 @@ Página principal - Activa24 C.A.
 	<div id="back-top" class="back-top">
 		<a href="#home"><span>↑</span>Regresar arriba</a>
 	</div>
+	<script>
+	$(document).ready(function() {
+		$('.fancybox-media').fancybox({
+			openEffect  : 'none',
+			closeEffect : 'none',
+			helpers : {
+				media : {}
+			}
+		});
+	});
+	</script>
 {% endblock%}
 {% block clear %}
 	<section class="empresasLogos">

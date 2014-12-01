@@ -54,9 +54,10 @@ h1{
 	background: #E6E7E6;
 	border-top: 1px solid #bfbfbf;
 	padding: 50px 0;
+	text-align: center;
 }
 .textoSobreNosotros{
-	width: 60%;
+	width: 100%;
 	padding: 10px;
 	text-align: justify;
 	display: inline-block;
@@ -135,6 +136,36 @@ h1{
 	width: 128px;
 }
 
+
+.video{
+	display: inline-block;
+	position: relative;
+	width: 350px;
+}
+.video a{
+	text-decoration: none;
+	color: black;
+}
+.playIcon{
+	position: absolute;
+	top: 45%;
+	left: 44%;
+	background: url(../../img/play.png) no-repeat;
+	width: 48px;
+	height: 48px;
+}
+.video img{
+	width: 350px;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+.titulo{
+	text-decoration: none;
+	text-align: center;
+	line-height: 1.1em;
+	margin-top: 10px;
+	font-size: 1.4em;
+}
 @media screen and (max-width: 1000px){
 	/* header  */
 	header{
@@ -179,5 +210,8 @@ h1{
 	/*footer*/
 	.listaMenuFooter{
 		font-size: 1.1em;
+	}
+	.video, .video img{
+		width: 200px;
 	}
 }
