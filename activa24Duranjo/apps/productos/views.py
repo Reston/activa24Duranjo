@@ -52,6 +52,7 @@ def categoria(request, titulo, template='productos/categoria.html', page_templat
 
 def serviciosyproductos(request, titulo, template='productos/serviciosproductos.html', page_template='productos/serviciosproductos_categorias.html'):
 	palabra_busqueda = request.POST.get('busqueda', '')
+	titulo = titulo.replace('_', ' ')
 	mensaje = ''
 	departamento = get_object_or_404(Departamento, titulo=titulo)
 	categorias = Categoria.objects.filter(departamento=departamento.pk)

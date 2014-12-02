@@ -164,7 +164,7 @@ to {
 .departamentoContainer{
 	display: inline-block;
 	vertical-align: top;
-	width: 29%;
+	width: 28%;
 	text-align: center;
 	background: #B20705;
 	padding: 1em;
@@ -181,18 +181,19 @@ to {
 	-webkit-border-radius: 300px;
 	-moz-border-radius: 300px;
 	border-radius: 300px;
-	width: 220px;
+	width: 250px;
 	height: 220px;
 	position: absolute;
 	top: -40%;
-	left: 50px;
+	left: 27px;
 }
 .departamentoTitulo{
 	font-size: 2.5em;
+	min-height: 72px;
 }
 .leermas{
 	display: block;
-	width: 35%;
+	width: 40%;
 	padding: 0.5em;
 	background: #808080;
 	font-size: 1.5em;

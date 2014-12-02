@@ -6,7 +6,7 @@ from decimal import Decimal
 
 class Departamento(models.Model):
 	"""docstring for Departamento"""
-	titulo = models.CharField(max_length=20, help_text='Hasta 20 caracteres y solamente alfanuméricos', unique=True)
+	titulo = models.CharField(max_length=25, help_text='Hasta 25 caracteres y solamente alfanuméricos', unique=True)
 	breve_descripcion = models.CharField(max_length=140, help_text='Hasta 140 caracteres')
 	imagen = models.ImageField(upload_to='imgdepartamentos')
 	creado_en = models.DateTimeField(auto_now_add=True, editable=False)
