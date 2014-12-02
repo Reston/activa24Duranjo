@@ -1,12 +1,13 @@
 from django.conf.urls import patterns, include, url
 from django.conf import settings
-from sitemaps import StaticViewSitemap, CategoriaSitemap, ProductoSitemap
+from sitemaps import StaticViewSitemap, CategoriaSitemap, ProductoSitemap, DepartamentoSitemap
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
 sitemaps = {
 	'categoria': CategoriaSitemap,
 	'producto': ProductoSitemap,
+	'departamento': DepartamentoSitemap,
 	'pages': StaticViewSitemap,
 }
 

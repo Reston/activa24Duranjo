@@ -1,7 +1,7 @@
 #-*- encoding: utf-8 -*-
 from django.contrib import sitemaps
 from django.core.urlresolvers import reverse
-from activa24Duranjo.apps.productos.models import Categoria, Producto
+from activa24Duranjo.apps.productos.models import Categoria, Producto, Departamento
 
 
 class StaticViewSitemap(sitemaps.Sitemap):
@@ -18,6 +18,16 @@ class StaticViewSitemap(sitemaps.Sitemap):
 
 	def location(self, item):
 		return reverse(item)
+
+class DepartamentoSitemap(sitemaps.Sitemap):
+	changefreq = 'monthly'
+	priority = 0.5
+
+	def items(self):
+		return Departamento.objects.all()
+
+	def lastmod(self, obj):
+		return obj.modificado_en
 
 
 class CategoriaSitemap(sitemaps.Sitemap):
