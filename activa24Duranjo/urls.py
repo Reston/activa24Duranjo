@@ -20,6 +20,8 @@ urlpatterns = patterns(
 	url(r'^', include('activa24Duranjo.apps.productos.urls')),
 	url(r'^tinymce/', include('tinymce.urls')),
 	(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
+	url(r'^blog/', include('zinnia.urls')),
+	url(r'^comments/', include('django.contrib.comments.urls')),
 	# Uncomment the admin/doc line below to enable admin documentation:
 	# url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 

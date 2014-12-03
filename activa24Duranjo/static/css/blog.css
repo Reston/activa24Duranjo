@@ -1,0 +1,11 @@
+header{
+	display: block;
+	height: 148px;
+}
+
+
+@media screen and (max-width: 1000px){
+	header {
+		height: 240px;
+	}
+}

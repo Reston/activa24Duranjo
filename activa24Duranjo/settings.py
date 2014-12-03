@@ -128,12 +128,16 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
     'django.contrib.humanize',
+    'django.contrib.comments',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     'activa24Duranjo.apps.productos',
     'activa24Duranjo.apps.slider',
     'tinymce',
     'endless_pagination',
+    'tagging',
+    'mptt',
+    'zinnia',
     # Uncomment the next line to enable admin documentation:
     #'django.contrib.admindocs',
 )
@@ -173,6 +177,7 @@ TEMPLATE_CONTEXT_PROCESSOR = (
     'django.core.context_processors.media',
     'django.core.context_processors.csrf',
     'django.core.context_processors.static',
+    'zinnia.context_processors.version',
 )
 
 #configuracion endless-pagination
@@ -180,6 +185,14 @@ from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
 TEMPLATE_CONTEXT_PROCESSORS += (
     'django.core.context_processors.request',
 )
+
+
+#Configuraciones de Zinnia Blog
+ZINNIA_COPYRIGHT = 'Activa 24 C.A.'
+ZINNIA_SPAM_CHECKER_BACKENDS = ('zinnia.spam_checker.backends.all_is_spam')
+ZINNIA_AUTO_CLOSE_TRACKBACKS_AFTER = 0
+ZINNIA_AUTO_CLOSE_COMMENTS_AFTER = 0
+
 
 ENDLESS_PAGINATION_PER_PAGE = 12
 #Configuraciones para enviar mensajes usando gmail
