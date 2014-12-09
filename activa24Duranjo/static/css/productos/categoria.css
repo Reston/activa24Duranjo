@@ -122,6 +122,7 @@ border: 15px solid #fff !important;
 	margin-left:20px; 
 	margin-bottom: 20px;
 	text-align: center;
+	vertical-align: top;
 }
 .productoContainer img{
 	text-align: center;

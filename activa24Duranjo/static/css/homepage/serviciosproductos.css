@@ -1,4 +1,5 @@
 @charset 'utf-8';
+/*ROJO : #B20705;*/
 .categoria{
 	padding: 60px 0 0 0;
 	border-top: 5px solid #CCC;
@@ -71,12 +72,12 @@
 	color: white;
 	margin-top: 50px;
 	outline: 1px solid #808080;
+	overflow: hidden;
 }
 .categoriaContainer img{
 	text-align: center;
 	width: 100%;
 }
-
 .categoriaTitulo{
 	font-weight: bold;
 	color: white;
@@ -166,12 +167,15 @@ to {
 	vertical-align: top;
 	width: 28%;
 	text-align: center;
-	background: #B20705;
+	background: #4D4D4D;
 	padding: 1em;
 	padding-top: 11%;
 	position: relative;
 	margin-top: 11%;
 	margin-left: 1%;
+}
+.departamentoContainer:hover{
+	background: #B20705;
 }
 .departamentoContainer a{
 	text-decoration: none;
