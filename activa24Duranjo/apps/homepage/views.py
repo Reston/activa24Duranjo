@@ -6,13 +6,20 @@ from django.template import RequestContext
 from django.core.mail import send_mail
 from activa24Duranjo.apps.productos.models import *
 from activa24Duranjo.apps.slider.models import SliderItem
+from zinnia.models import Entry
+import nltk
 
 
 def index(request):
 	slideritem = SliderItem.objects.all()
 	productos = Producto.objects.all().order_by('creado_en')[:3]
 	imagenes = ImgProductos.objects.filter(producto__in=list(productos))
-	ctx = {'slideritem': slideritem, 'productos': productos, 'imagenes': imagenes}
+	#entradas de blog
+	entradas = Entry.objects.order_by('-creation_date')[:3]
+	for ent in entradas:
+		quitar_html= nltk.clean_html(ent.content) 
+		ent.content =  quitar_html[:65]
+	ctx = {'slideritem': slideritem, 'productos': productos, 'imagenes': imagenes, 'entradas': entradas}
 	return render_to_response('homepage/index.html', ctx, context_instance=RequestContext(request))
 
 def about(request):

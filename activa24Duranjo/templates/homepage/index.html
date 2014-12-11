@@ -79,6 +79,30 @@ Página principal - Activa24 C.A.
 			</div>
 		</div>
 	</section>
+	<section class="noticias">
+		<div class="wrapper">
+			<div class="tituloSection">
+				<h2>Últimas noticias</h2>
+			</div>
+			<div class="listaNoticias">
+				<ul>
+					{% for item in entradas %}
+					<li>
+						<div class="tituloNoticia">{{ item.title }}</div>
+						<img src="{{ MEDIA_URL }}{{item.image}}" alt="{{ item.title }}">
+						<div class="descripNoticia">
+							{% autoescape off %}
+							<p>{{item.content}}...</p>
+							{% endautoescape %}
+						</div>
+						<div class="botonLeermas"><a href="{{ item.get_absolute_url }}">Leer más</a></div>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="verNoticias"><a href="/blog">Ver todas las noticias</a></div>
+		</div>
+	</section>
 	<!-- SLIDER INIT -->
 	<script>
 		$(document).ready(function() {
