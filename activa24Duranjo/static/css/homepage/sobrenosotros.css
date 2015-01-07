@@ -2,7 +2,7 @@
 h2{
 	width: 50%;
 	border-top: 2px solid #D1D1D1;
-	padding: 5px 0;
+	padding: 15px 0;
 }
 .contactoInfo p{
 	color: black;
@@ -18,10 +18,10 @@ h2{
 }
 /* Section quines somos*/
 .quienesSomos, .vision{
-	height: 385px;
+	height: 450px;
 }
 .mision{
-	height: 477px;
+	height: 425px;
 }
 .vision{
 	margin-top: 90px;
